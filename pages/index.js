@@ -1,6 +1,11 @@
 import images from '@/utils/images';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { motion } from 'framer-motion'
 
 export default function Home() {
 
@@ -12,6 +17,8 @@ export default function Home() {
         <GallerySection />
         <ContactInfoSection />
         <ContactUsSection />
+        <OurProcessSection />
+        <ReviewsSection />
     </div>
   );
 }
@@ -27,7 +34,7 @@ const AboutUS = () => {
               <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">About Us</h1>
               <p className="mb-8 leading-relaxed">
                 SQC has proudly been serving Halton region and surrounding areas for over 5 yrs, providing quality craftsmanship and a high attention to 
-                detail. From inital quote , to planning , and then execution of the project; SQC ensures transparent communication and professionalism . Thus
+                detail. From inital quote, to planning, and then execution of the project; SQC ensures transparent communication and professionalism. Thus
                 making your renovation process as easy as possible for you.
               </p>
             </div>
@@ -78,9 +85,71 @@ const ServicesSection = () => {
 
 
 const ReviewsSection = () => {
-  return;
-}
+  const [reviews, setReviews] = useState(null);
 
+  useEffect(() => {
+    fetch('/api/reviews')
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error(`Status Code: ${response.status}`);
+        }
+      })
+      .then(data => {
+        const sortedReviews = data.reviews.sort((a, b) => b.rating - a.rating).slice(0, 15);
+        setReviews(sortedReviews);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  }, []);
+
+  if (!reviews) return <div>Loading...</div>;
+
+  const reviewGroups = [];
+  for (let i = 0; i < reviews.length; i += 3) {
+    reviewGroups.push(reviews.slice(i, i + 3));
+  }
+
+  return (
+    <section className="bg-gray-100 py-20">
+      <h1 className="text-center text-5xl font-extrabold mb-10">Reviews</h1>
+      <Carousel
+        showArrows={true}
+        infiniteLoop={true}
+        showThumbs={false}
+        showStatus={false}
+        autoPlay={true}
+        interval={6000}
+        className="flex justify-center"
+      >
+        {reviewGroups.map((group, index) => (
+          <div key={index} className="flex justify-around">
+            {group.map((review, index) => (
+              <motion.div
+                key={index}
+                className="p-4 w-80 bg-white shadow-xl rounded-xl flex flex-col items-center text-center transition-transform duration-300 ease-in-out hover:scale-105"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-xl font-bold text-gray-800">{review.customer_name}</h2>
+                <div className="flex items-center mt-1">
+                  {Array(review.rating).fill().map((_, i) => (
+                    <svg key={i} className="w-4 h-4 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                      <path d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"/>
+                    </svg>
+                  ))}
+                </div>
+                <p className="mt-2 text-gray-600">{review.review}</p>
+              </motion.div>
+            ))}
+          </div>
+        ))}
+      </Carousel>
+    </section>
+  );
+};
 
 const ContactUsSection = () => {
   const [formValues, setFormValues] = useState({
@@ -236,5 +305,61 @@ const ContactInfoSection = () => {
 }
 
 const OurProcessSection = () => {
-    return;
+    return(
+      <div className="mx-auto py-20 bg-gradient-to-r from-gray-50 to-gray-200">
+        <h1 className="text-black text-center text-5xl font-extrabold">Our Process</h1>
+        <p className="text-black text-center text-xl mt-6 mx-32">
+          Discover the step-by-step process we follow to ensure a successful project.
+        </p>
+        <div className="mx-auto px-6 py-8 relative">
+          <div className="absolute left-1/2 top-0 h-full w-1 bg-black"></div> {/* Here is the Vertical Line */}
+          <div className="flex flex-col space-y-12">
+
+            {/* Consultation */}
+            <div className="relative w-full p-4 flex flex-wrap" id="consultation">
+              <div className="w-1/2 px-4">
+                <h2 className="text-lg font-semibold">Consultation</h2>
+                <p>Details about the consultation stage...</p>
+              </div>
+              <div className="w-1/2 px-4 transition-all duration-500 ease-in-out transform hover:scale-110">
+                <img src="/SearleLogo.jpeg" alt="Consultation" />
+              </div>
+            </div>
+
+            {/* Quote */}
+            <div className="relative w-full p-4 flex flex-wrap" id="quote">
+              <div className="w-1/2 px-4 transition-all duration-500 ease-in-out transform hover:scale-110">
+                <img src="/SearleLogo.jpeg" alt="Quote" />
+              </div>
+              <div className="w-1/2 px-4">
+                <h2 className="text-lg font-semibold">Quote</h2>
+                <p>Details about the quote stage...</p>
+              </div>
+            </div>
+
+            {/* Design/Review/Plan */}
+            <div className="relative w-full p-4 flex flex-wrap" id="design-review-plan">
+              <div className="w-1/2 px-4">
+                <h2 className="text-lg font-semibold">Design/Review/Plan</h2>
+                <p>Details about the design/review/plan stage...</p>
+              </div>
+              <div className="w-1/2 px-4 transition-all duration-500 ease-in-out transform hover:scale-110">
+                <img src="/SearleLogo.jpeg" alt="Design/Review/Plan" />
+              </div>
+            </div>
+
+            {/* Start Your Project */}
+            <div className="relative w-full p-4 flex flex-wrap" id="start-project">
+              <div className="w-1/2 px-4 transition-all duration-500 ease-in-out transform hover:scale-110">
+                <img src="/SearleLogo.jpeg" alt="Start Your Project" />
+              </div>
+              <div className="w-1/2 px-4">
+                <h2 className="text-lg font-semibold">Start Your Project</h2>
+                <p>Details about the start your project stage...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
 }
