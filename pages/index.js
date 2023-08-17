@@ -316,20 +316,20 @@ const OurProcessSection = () => {
           <div className="flex flex-col space-y-12">
 
             {/* Consultation */}
-            <div className="relative w-full p-4 flex flex-wrap" id="consultation">
+            <div className="relative w-full p-4 flex flex-wrap ml-12" id="consultation">
               <div className="w-1/2 px-4">
                 <h2 className="text-lg font-semibold">Consultation</h2>
                 <p>Details about the consultation stage...</p>
               </div>
               <div className="w-1/2 px-4 transition-all duration-500 ease-in-out transform hover:scale-110">
-                <img src="/SearleLogo.jpeg" alt="Consultation" />
+                <Image src="/SearleLogo.jpeg" alt="Consultation" width={600} height={300} />
               </div>
             </div>
 
             {/* Quote */}
             <div className="relative w-full p-4 flex flex-wrap" id="quote">
               <div className="w-1/2 px-4 transition-all duration-500 ease-in-out transform hover:scale-110">
-                <img src="/SearleLogo.jpeg" alt="Quote" />
+                <Image src="/SearleLogo.jpeg" alt="Quote" width={600} height={300} />
               </div>
               <div className="w-1/2 px-4">
                 <h2 className="text-lg font-semibold">Quote</h2>
@@ -338,20 +338,20 @@ const OurProcessSection = () => {
             </div>
 
             {/* Design/Review/Plan */}
-            <div className="relative w-full p-4 flex flex-wrap" id="design-review-plan">
+            <div className="relative w-full p-4 flex flex-wrap ml-12" id="design-review-plan">
               <div className="w-1/2 px-4">
                 <h2 className="text-lg font-semibold">Design/Review/Plan</h2>
                 <p>Details about the design/review/plan stage...</p>
               </div>
               <div className="w-1/2 px-4 transition-all duration-500 ease-in-out transform hover:scale-110">
-                <img src="/SearleLogo.jpeg" alt="Design/Review/Plan" />
+                <Image src="/SearleLogo.jpeg" alt="Design/Review/Plan" width={600} height={300}/>
               </div>
             </div>
 
             {/* Start Your Project */}
             <div className="relative w-full p-4 flex flex-wrap" id="start-project">
               <div className="w-1/2 px-4 transition-all duration-500 ease-in-out transform hover:scale-110">
-                <img src="/SearleLogo.jpeg" alt="Start Your Project" />
+                <Image src="/SearleLogo.jpeg" alt="Start Your Project" width={600} height={300} />
               </div>
               <div className="w-1/2 px-4">
                 <h2 className="text-lg font-semibold">Start Your Project</h2>
