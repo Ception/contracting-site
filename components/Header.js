@@ -17,16 +17,19 @@ export default function Header() {
         <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
           <div className="text-lg lg:flex-grow flex justify-end space-x-4">
             <Link href="/" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-yellow-200 transition-colors duration-300 hover:shadow-md p-2 rounded">
-                Home
+                About Us
             </Link>
             <Link href="/services" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-yellow-200 transition-colors duration-300 hover:shadow-md p-2 rounded">
                 Services
             </Link>
             <Link href="/menu" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-yellow-200 transition-colors duration-300 hover:shadow-md p-2 rounded">
-                Menu
+                Contact Us
             </Link>
             <Link href="/about" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-yellow-200 transition-colors duration-300 hover:shadow-md p-2 rounded">
-                About
+                Gallery
+            </Link>
+            <Link href="/about" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-yellow-200 transition-colors duration-300 hover:shadow-md p-2 rounded">
+                Our Process
             </Link>
           </div>
         </div>

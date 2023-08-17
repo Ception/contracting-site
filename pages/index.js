@@ -104,7 +104,7 @@ const GallerySection = () => {
         </div>
         <div className="mt-10 text-center">
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-all duration-300 ease-in-out transform hover:scale-110"
+            className="sticky top-10 ml-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-all duration-300 ease-in-out transform hover:scale-110"
             onClick={() => setShowAll(!showAll)}
           >
             {showAll ? 'Show Less' : 'Show All'}
