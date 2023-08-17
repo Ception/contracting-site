@@ -13,11 +13,29 @@ export default function Home() {
     <div>
         <Image className="rounded-lg shadow-2xl w-full h-80 object-cover border-4 border-gray-200" src='/SearleLogo.jpeg' alt="Searle Logo" width={500} height={400}/>
         <AboutUS />
+        <div className="png-container">
+          <Image className='full-width-png' src='/first-separator.png' width={500} height={300}/>
+        </div>
         <ServicesSection />
+        <div className="png-container">
+          <Image className='full-width-png' src='/second-separator.png' width={500} height={300}/>
+        </div>
         <GallerySection />
+        <div className="png-container">
+          <Image className='full-width-png' src='/first-separator.png' width={500} height={300}/>
+        </div>
         <ContactInfoSection />
+        <div className="png-container">
+          <Image className='full-width-png' src='/second-separator.png' width={500} height={300}/>
+        </div>
         <ContactUsSection />
+        <div className="png-container">
+          <Image className='full-width-png' src='/first-separator.png' width={500} height={300}/>
+        </div>
         <OurProcessSection />
+        <div className="png-container">
+          <Image className='full-width-png' src='/second-separator.png' width={500} height={300}/>
+        </div>
         <ReviewsSection />
     </div>
   );
@@ -25,7 +43,7 @@ export default function Home() {
 
 const AboutUS = () => {
   return (
-        <section className="text-gray-600 body-font bg-gray-200 p-6">
+        <section className="text-gray-600 body-font bg-new-gray p-6">
           <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 shadow-lg rounded-lg overflow-hidden">
               <Image  className="object-cover object-center w-full h-full transform hover:scale-105 transition-transform duration-500" alt="Searle Logo" src="/SearleLogo.jpeg" width={500} height={300}/>
@@ -62,7 +80,7 @@ const ServicesSection = () => {
   ];
 
   return (
-      <div className="bg-yellow-color py-16">
+      <div className="bg-second-gray py-16">
       <h2 className="text-center text-5xl font-extrabold text-red-600 mb-8">Our Services</h2>
       <div className="container mx-auto flex justify-center mt-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -113,7 +131,7 @@ const ReviewsSection = () => {
   }
 
   return (
-    <section className="bg-gray-100 py-20">
+    <section className="bg-new-gray py-20">
       <h1 className="text-center text-5xl font-extrabold mb-10">Reviews</h1>
       <Carousel
         showArrows={true}
@@ -176,7 +194,7 @@ const ContactUsSection = () => {
   };
 
   return (
-    <div className="bg-gray-100 py-16">
+    <div className="bg-new-gray py-16">
       <h2 className="text-center text-4xl font-extrabold text-gray-800 mb-8">Request a Quote</h2>
       <form className="container mx-auto" onSubmit={handleSubmit}>
         <div className="mb-4">
@@ -228,7 +246,7 @@ const GallerySection = () => {
   const displayedImages = showAll ? images : images.slice(0, 6); // Displaying the first 6 images by default, we can increase this
 
     return (
-<div className="bg-gray-200 py-16">
+    <div className="bg-new-gray py-16">
       <h2 className="text-center text-5xl font-extrabold text-gray-600 mb-8">Gallery</h2>
       <div className="container mx-auto flex justify-center mt-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
@@ -256,7 +274,7 @@ const GallerySection = () => {
 
 const ContactInfoSection = () => {
     return  (
-      <div className="bg-white py-16">
+      <div className="bg-second-gray py-16">
         <h2 className="text-center text-4xl font-extrabold text-gray-800 mb-8">Contact Information</h2>
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           
@@ -306,7 +324,7 @@ const ContactInfoSection = () => {
 
 const OurProcessSection = () => {
     return(
-      <div className="mx-auto py-20 bg-gradient-to-r from-gray-50 to-gray-200">
+      <div className="mx-auto py-20 bg-second-gray">
         <h1 className="text-black text-center text-5xl font-extrabold">Our Process</h1>
         <p className="text-black text-center text-xl mt-6 mx-32">
           Discover the step-by-step process we follow to ensure a successful project.
