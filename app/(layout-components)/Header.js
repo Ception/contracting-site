@@ -1,10 +1,12 @@
+'use client'
+
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 export default function Header() {
   const router = useRouter();
 
-  function navigateToOrder() {
+  function navigateToHome() {
     router.push('/');
   }
 
@@ -12,7 +14,7 @@ export default function Header() {
     <header className="p-4 bg-new-red text-white drop-shadow-xl">
       <nav className="container mx-auto flex items-center justify-between flex-wrap p-4">
         <div className="flex items-center flex-no-shrink text-white mr-6 cursor-pointer transform hover:scale-105 transition-transform duration-500">
-          <span className="text-3xl font-bold tracking-wider italic" onClick={navigateToOrder}>Searle Quality Contracting</span>
+          <span className="text-3xl font-bold tracking-wider italic" onClick={navigateToHome}>Searle Quality Contracting</span>
         </div>
         <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
           <div className="text-lg lg:flex-grow flex justify-end space-x-4">
