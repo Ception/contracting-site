@@ -14,6 +14,15 @@ export const AboutUS = () => {
                   detail. From inital quote, to planning, and then execution of the project; SQC ensures transparent communication and professionalism. Thus
                   making your renovation process as easy as possible for you.
                 </p>
+                <li className='flex items-center justify-between mb-8 pb-2 border-b-2 border-black'>
+                  <span>something here </span><span className='font-bold'>Fully Insured</span>
+                </li>
+                <li className='flex items-center justify-between mb-8 pb-2 border-b-2 border-black'>
+                  <span>something here </span><span className='font-bold'>Fully Insured</span>
+                </li>
+                <li className='flex items-center justify-between mb-8 pb-2 border-b-2 border-black'>
+                  <span>something here </span><span className='font-bold'>Fully Insured</span>
+                </li>
               </div>
             </div>
           </section>

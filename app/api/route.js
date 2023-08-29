@@ -1,6 +1,8 @@
+import { NextResponse } from "next/server";
+
 const { Client } = require("@googlemaps/google-maps-services-js");
 
-export default async function handler(req, res) {
+export async function GET(request) {
   const client = new Client({});
 
   client
@@ -21,13 +23,13 @@ export default async function handler(req, res) {
           review: review.text,
           rating: review.rating,
         }));
-        res.json({ reviews });
+        NextResponse.json({ reviews });
       } else {
-        res.status(400).json({ error: r.data.status });
+        NextResponse.status(400).json({ error: r.data.status });
       }
     })
     .catch((e) => {
       console.error(e.response.data.error_message);
-      res.status(500).json({ error: "Failed to fetch reviews" });
+      NextResponse.status(500).json({ error: "Failed to fetch reviews" });
     });
 }

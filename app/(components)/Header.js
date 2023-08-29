@@ -17,7 +17,7 @@ export default function Header() {
           <span className="text-3xl font-bold tracking-wider italic" onClick={navigateToHome}>Searle Quality Contracting</span>
         </div>
         <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-          <div className="text-lg lg:flex-grow flex justify-end space-x-4">
+          <div className="text-lg lg:flex-grow flex justify-end space-x-4 items-center">
             <Link href="#about-us" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-yellow-200 transition-colors duration-300 hover:shadow-md p-2 rounded">
                 About Us
             </Link>
@@ -32,6 +32,9 @@ export default function Header() {
             </Link>
             <Link href="#our-process" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-yellow-200 transition-colors duration-300 hover:shadow-md p-2 rounded">
                 Our Process
+            </Link>
+            <Link className='inline-block px-8 py-4 text-white hover:text-black tracking-tighter hover:bg-green-400 border-2 border-white focus:border-green-400 focus:border-opacity-40 hover:border-green-400 focus:ring-4 focus:ring-green-400 focus:ring-opacity-40 rounded-full transition duration-300' href='/contact'>
+              Get in Touch
             </Link>
           </div>
         </div>

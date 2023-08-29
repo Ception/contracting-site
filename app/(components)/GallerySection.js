@@ -3,32 +3,49 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 export const GallerySection = () => {
-    const [showAll, setShowAll] = useState(false);
-    const displayedImages = showAll ? images : images.slice(0, 6); // Displaying the first 6 images by default, we can increase this
-  
-      return (
-      <div className="bg-new-gray py-16">
-        <h2 className="text-center text-5xl font-extrabold text-gray-600 mb-8">Gallery</h2>
-        <div className="container mx-auto flex justify-center mt-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
-            {displayedImages.map((item, index) => (
-              <div className="rounded-lg overflow-hidden shadow-2xl transform transition-transform duration-500 ease-in-out hover:scale-105" key={index}>
-                <Image className="w-full h-64 object-cover" src={item.image} alt={item.name} width={500} height={300}/>
-                <div className="px-6 py-4 bg-white">
-                  <div className="font-bold text-xl mb-2">{item.name}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="mt-10 text-center">
-            <button
-              className="sticky top-10 ml-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-all duration-300 ease-in-out transform hover:scale-110"
-              onClick={() => setShowAll(!showAll)}
-            >
-              {showAll ? 'Show Less' : 'Show All'}
-            </button>
-          </div>
-        </div>
+  // Initialize state to track the selected category
+  const [selectedCategory, setSelectedCategory] = useState('landscaping');
+
+  // Function to handle category click
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+  };
+
+  // Reference to the images related to the selected category
+  const categoryImages = images[selectedCategory];
+
+  return (
+    <div className='bg-new-gray relative flex'>
+
+      {/* List on the left */}
+      <div className='w-full lg:w-1/3 px-3 pt-10 lg:pt-20 pb-10'>
+        <ul>
+          {Object.keys(images).map((category, index) => (
+            <li key={index} className='mr-4 md:mr-0 mb-4 md:mb-10 lg:mb-16' onClick={() => handleCategoryClick(category)}>
+              <p className={`inline-block cursor-pointer pl-4 text-2xl font-semibold transition ${selectedCategory === category ? 'border-l-2 border-blue-400' : ''}`}>{category.charAt(0).toUpperCase() + category.slice(1)}</p>
+            </li>
+          ))}
+        </ul>
       </div>
-      );
-    }
+
+      {/* Images on the right */}
+      <div className='w-full lg:w-2/3 flex flex-col px-3'>
+
+        {/* Grid container */}
+        <div className='grid grid-cols-2 gap-4 lg:grid-cols-3 lg:gap-6'>
+          {Object.keys(categoryImages).map((key, index) => {
+            const { name, image } = categoryImages[key];
+            return (
+              <div key={index} className='col-span-1'>
+                <Image className='object-cover rounded-lg' src={image} alt={name} width={200} height={200} />
+              </div>
+            );
+          })}
+        </div>
+
+      </div>
+
+    </div>
+  )
+};
+
