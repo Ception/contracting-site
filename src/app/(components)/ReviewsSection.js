@@ -76,10 +76,23 @@ export const ReviewsSection = () => {
   const [reviews, setReviews] = useState(null);
 
   useEffect(() => {
-    fetch('/api/route')
-      .then(response => response.ok ? response.json() : Promise.reject(`Status Code: ${response.status}`))
-      .then(data => setReviews(data.reviews.slice(0, 5)))
-      .catch(error => console.error('Error:', error));
+    fetch('/api/reviews')
+  .then(response => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      console.error('Failed to fetch reviews:', response);
+      return Promise.reject(`Status Code: ${response.status}`);
+    }
+  })
+  .then(data => {
+    if (data && data.reviews) {
+      setReviews(data.reviews.slice(0, 5));
+    } else {
+      console.error('No reviews data:', data);
+    }
+  })
+  .catch(error => console.error('Error:', error));
   }, []);
 
   if (!reviews) return <div>Loading...</div>;
@@ -87,13 +100,14 @@ export const ReviewsSection = () => {
   return (
     <div className="bg-new-gray">
       <div className='mb-20 md:max-w-3xl text-center mx-auto'>
-        <h2 className='text-7xl lg:text-8xl text-white tracking-tighter-xl'>Hello</h2>
+        <h2 className='text-7xl lg:text-8xl text-white tracking-tighter-xl'>Reviews</h2>
       </div>
       <div className='flex flex-wrap'>
         {reviews.map((review, index) => (
           <div key={index} className='w-full md:w-1/2 lg:w-1/3 p-5'>
             <div className="px-9 py-10 h-auto bg-second-gray border border-gray-900 border-opacity-30 rounded-3xl w-full">
               <h3 className='font-heading mb-6 text-2xl text-white tracking-tighter leading-tight'>{review.customer_name}</h3>
+              <p className='mb-6 text-white text-opacity-60'>{review.review}</p>
               <div className="flex items-center mt-1">
                 {Array(review.rating).fill().map((_, i) => (
                   <svg key={i} className="w-4 h-4 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -104,8 +118,8 @@ export const ReviewsSection = () => {
             </div>
           </div>
         ))}
-        <div className='w-full md:w-1/2 lg:w-1/3 p-5' onClick={() => window.location.href = 'https://www.google.com/maps/'}>
-          <div className="px-9 py-10 h-auto bg-gradient-radial-dark border border-gray-900 border-opacity-30 rounded-3xl w-full flex items-center justify-center">
+        <div className='w-full md:w-1/2 lg:w-1/3 p-5 cursor-pointer' onClick={() => window.location.href = 'https://www.google.com/maps/'}>
+          <div className="px-9 py-10 h-auto bg-gradient-radial-dark border border-gray-900 border-opacity-30 rounded-3xl w-full flex items-center justify-center  hover:bg-second-gray transition">
             <span className="text-4xl text-white">→</span>
           </div>
         </div>
