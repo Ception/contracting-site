@@ -11,7 +11,7 @@ export default function Header() {
   }
 
   return (
-    <header className="p-4 bg-new-red text-white drop-shadow-xl">
+    <header className="p-4 bg-red-700 text-white drop-shadow-xl">
       <nav className="container mx-auto flex items-center justify-between flex-wrap p-4">
         <div className="flex items-center flex-no-shrink text-white mr-6 cursor-pointer transform hover:scale-105 transition-transform duration-500">
           <span className="text-3xl font-bold tracking-wider italic" onClick={navigateToHome}>Searle Quality Contracting</span>
@@ -24,16 +24,13 @@ export default function Header() {
             <Link href="#services" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-yellow-200 transition-colors duration-300 hover:shadow-md p-2 rounded">
                 Services
             </Link>
-            <Link href="#contact-us" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-yellow-200 transition-colors duration-300 hover:shadow-md p-2 rounded">
-                Contact Us
-            </Link>
             <Link href="#gallery" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-yellow-200 transition-colors duration-300 hover:shadow-md p-2 rounded">
                 Gallery
             </Link>
             <Link href="#our-process" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-yellow-200 transition-colors duration-300 hover:shadow-md p-2 rounded">
                 Our Process
             </Link>
-            <Link className='inline-block px-8 py-4 text-white hover:text-black tracking-tighter hover:bg-green-400 border-2 border-white focus:border-green-400 focus:border-opacity-40 hover:border-green-400 focus:ring-4 focus:ring-green-400 focus:ring-opacity-40 rounded-full transition duration-300' href='/contact'>
+            <Link className='inline-block px-8 py-4 text-white hover:text-black tracking-tighter hover:bg-green-400 border-2 border-white focus:border-green-400 focus:border-opacity-40 hover:border-green-400 focus:ring-4 focus:ring-green-400 focus:ring-opacity-40 rounded-full transition duration-300' href='#contact-us'>
               Get in Touch
             </Link>
           </div>

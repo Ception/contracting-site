@@ -1,7 +1,7 @@
 
 export const ContactInfoSection = () => {
     return  (
-      <div className="bg-second-gray py-16">
+      <div className="bg-red-700 py-16">
         <h2 className="text-center text-4xl font-extrabold text-gray-800 mb-8">Contact Information</h2>
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           

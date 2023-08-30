@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export const AboutUS = () => {
     return (
-          <section className="text-gray-600 body-font bg-new-gray p-6">
+          <section className="text-white body-font bg-red-700">
             <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
             <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 shadow-lg rounded-lg overflow-hidden">
                 <Image  className="object-cover object-center w-full h-full transform hover:scale-105 transition-transform duration-500" alt="Searle Logo" src="/SearleLogo.jpeg" width={500} height={300}/>

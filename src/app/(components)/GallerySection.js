@@ -15,7 +15,7 @@ export const GallerySection = () => {
   const categoryImages = images[selectedCategory];
 
   return (
-    <div className='bg-new-gray relative flex'>
+    <div className='bg-red-700 relative flex p-6'>
 
       {/* List on the left */}
       <div className='w-full lg:w-1/3 px-3 pt-10 lg:pt-20 pb-10'>

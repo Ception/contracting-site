@@ -24,7 +24,7 @@ html {
     right: 50px;
     width: 50px;
     height: 50px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgb(255, 255, 255, 0.8);
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -36,7 +36,7 @@ html {
   }
   
 .scroll-btn:hover {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(255, 255, 255, 0.3);
   }
   
 .scroll-arrow {
@@ -51,6 +51,7 @@ html {
     background-position: center center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/SearleLogo.jpeg');
   }
+
   
   @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
@@ -64,3 +65,62 @@ html {
     }
   }
   
+  .custom-shape-divider-top-1693420302 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1693420302 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-top-1693420302 .shape-fill {
+    fill: #B91C1C;
+}
+
+.custom-shape-divider-top-1693420398 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1693420398 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-top-1693420398 .shape-fill {
+  fill: #000000;
+}
+
+.custom-shape-divider-top-1693420571 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1693420571 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-top-1693420571 .shape-fill {
+  fill: #000000;
+}

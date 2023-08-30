@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="p-4 bg-rose-700 text-white text-center shadow-xl">
+    <footer className="p-4 bg-black text-white text-center shadow-xl">
       <div className="container mx-auto flex flex-col items-center space-y-2">
         <p className="text-xl font-semibold">© {new Date().getFullYear()} Searle Quality Contracting</p>
         <div className="flex space-x-4">
