@@ -1,11 +1,14 @@
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Modal } from './PopUp';
   
 export const ContactUsSection = () => {
   const [email, setEmail] = useState('');
+
+  useEffect(() => {
+    localStorage.setItem('email', email);
+  }, [email]);
 
   return (
     <section className='bg-black overflow-hidden'>
@@ -25,7 +28,7 @@ export const ContactUsSection = () => {
                   <input className='block w-full px-5 py-4 text-white bg-black outline-none placeholder-gray-500 border border-gray-600 rounded-lg focus:ring-4 focus:ring-indigo-300 transition duration-200' type='email' placeholder='Enter your email' value={email} onChange={ (e) => {setEmail(e.target.value)}} />
                 </div>
                 <div className='w-auto p-1.5'>
-                  <div className='inline-block px-5 py-4 text-white font-semibold tracking-tight bg-indigo-500 hover:bg-indigo-600 rounded-lg focus:ring-4 focus:ring-indigo-300 transition duration-200'><Modal /></div>
+                  <div className='inline-block px-5 py-4 text-white font-semibold tracking-tight bg-indigo-500 hover:bg-indigo-600 rounded-lg focus:ring-4 focus:ring-indigo-300 transition duration-200'><Modal email={email} /></div>
                 </div>
               </div>
               <p className='text-gray-500 tracking-tight'>By providing your email, you agree to receive updates and promotional materials from Searle Quality Contracting.</p>

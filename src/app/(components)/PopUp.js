@@ -1,7 +1,9 @@
 import React from 'react';
 import Popup from 'reactjs-popup';
+import { sendContactForm } from '@/utils/script';
 
-export const Modal = () => (
+export const Modal = (email) => (
+  
   <Popup
     overlayStyle={{ background: 'rgba(0,0,0,0.7)', backdropFilter: 'blur(5px)' }}
     trigger={
@@ -22,19 +24,19 @@ export const Modal = () => (
           <form>
             <div className="mb-4">
               <label className="block text-sm">Name</label>
-              <input className="w-full p-2 mt-1 bg-black border-2 border-red-700 rounded" type="text" />
+              <input className="w-full p-2 mt-1 bg-black border-2 border-red-700 rounded" type="text" id='name' />
             </div>
             <div className="mb-4">
               <label className="block text-sm">Email</label>
-              <input className="w-full p-2 mt-1 bg-black border-2 border-red-700 rounded" type="email" />
+              <input className="w-full p-2 mt-1 bg-black border-2 border-red-700 rounded" type="email" placeholder={email ? email.email : "Type your email"} id='email'></input>
             </div>
             <div className="mb-4">
               <label className="block text-sm">Date</label>
-              <input className="w-full p-2 mt-1 bg-black border-2 border-red-700 rounded" type="date" />
+              <input className="w-full p-2 mt-1 bg-black border-2 border-red-700 rounded" type="date" id='date'/>
             </div>
             <div className="mb-4">
               <label className="block text-sm">Message</label>
-              <textarea className="w-full p-2 mt-1 bg-black border-2 border-red-700 rounded h-32"></textarea>
+              <textarea className="w-full p-2 mt-1 bg-black border-2 border-red-700 rounded h-32" id='message'></textarea>
             </div>
           </form>
         </div>
@@ -48,7 +50,7 @@ export const Modal = () => (
           >
             Close
           </button>
-          <button className="button p-2 bg-red-700 hover:bg-red-800 text-white rounded">
+          <button className="button p-2 bg-red-700 hover:bg-red-800 text-white rounded" onClick={ (e) => {e.preventDefault(); submitContactForm()}}>
             Submit
           </button>
         </div>
@@ -56,3 +58,21 @@ export const Modal = () => (
     )}
   </Popup>
 );
+
+async function submitContactForm() {
+  try {
+    let email = document.getElementById('email').value;
+    if (email === '') {email = document.getElementById('email').placeholder}
+    const name = document.getElementById('name').value;
+    const date = document.getElementById('date').value;
+    const message = document.getElementById('message').value;
+    console.log(email, name, date, message);
+
+    let response = await sendContactForm(email, name, date, message);
+
+    console.log(response);
+
+  } catch (error) {
+    console.error(error);
+  }
+};
