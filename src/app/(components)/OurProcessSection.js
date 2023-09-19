@@ -16,10 +16,7 @@ export const OurProcessSection = () => {
       <div className="mx-auto px-6 py-8 relative">
         <div className="absolute left-1/2 top-0 h-full w-1 bg-white"></div>
         <div className="flex flex-col space-y-12">
-          <div
-            className="relative w-full p-4 flex flex-wrap ml-12"
-            id="consultation"
-          >
+          <div className="relative w-full p-4 flex flex-wrap" id="consultation">
             <div
               className="w-1/2 px-4 mt-36 text-2xl text-slate-200"
               style={{ paddingRight: "4rem" }}
@@ -68,7 +65,7 @@ export const OurProcessSection = () => {
           </div>
 
           <div
-            className="relative w-full p-4 flex flex-wrap ml-12"
+            className="relative w-full p-4 flex flex-wrap"
             id="design-review-plan"
           >
             <div
