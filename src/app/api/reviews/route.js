@@ -9,6 +9,7 @@ export async function GET() {
       params: {
         place_id: process.env.PLACE_ID,
         fields: ["review"],
+        key: process.env.API_KEY,
       },
       timeout: 1000,
     });
