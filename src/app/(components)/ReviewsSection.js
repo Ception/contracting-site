@@ -2,6 +2,15 @@ import { useState, useEffect } from "react";
 
 export const ReviewsSection = () => {
   const [reviews, setReviews] = useState(null);
+  const [startIndex, setStartIndex] = useState(0);
+
+  const nextReview = () => {
+    if (startIndex + 3 >= reviews.length) {
+      setStartIndex(0);
+    } else {
+      setStartIndex((previousStartIndex) => previousStartIndex + 3);
+    }
+  };
 
   useEffect(() => {
     fetch("/api/reviews")
@@ -32,14 +41,14 @@ export const ReviewsSection = () => {
           Reviews
         </h2>
       </div>
-      <div className="flex flex-wrap">
-        {reviews.map((review, index) => (
-          <div key={index} className="w-full md:w-1/2 lg:w-1/3 p-5">
-            <div className="px-9 py-10 h-auto bg-black border border-gray-900 border-opacity-30 rounded-3xl w-full">
-              <h3 className="font-heading mb-6 text-2xl text-slate-200 tracking-tighter leading-tight">
+      <div className="flex justify-start gap-x-5">
+        {reviews.slice(startIndex, startIndex + 3).map((review, index) => (
+          <div key={index} className="w-1/3 p-5">
+            <div className="h-72 px-6 py-8 bg-black border border-gray-900 border-opacity-30 rounded-3xl flex flex-col">
+              <h3 className="font-heading mb-4 text-2xl text-slate-200 tracking-tighter leading-tight">
                 {review.customer_name}
               </h3>
-              <p className="mb-6 text-slate-200 text-opacity-60">
+              <p className="mb-4 text-slate-200 text-opacity-60 overflow-ellipsis overflow-hidden line-clamp-4 flex-grow">
                 {review.review}
               </p>
               <div className="flex items-center mt-1">
@@ -59,16 +68,14 @@ export const ReviewsSection = () => {
             </div>
           </div>
         ))}
-        <div
-          className="w-full md:w-1/2 lg:w-1/3 p-5 cursor-pointer"
-          onClick={() =>
-            (window.location.href = "https://www.google.com/maps/")
-          }
+      </div>
+      <div className="text-center mt-8">
+        <button
+          onClick={() => nextReview()}
+          className="px-8 py-2 bg-black text-slate-200 hover:bg-gray-800 transition rounded"
         >
-          <div className="px-9 py-10 h-auto bg-gradient-radial-dark border border-black border-opacity-30 rounded-3xl w-full flex items-center justify-center  hover:bg-black hover:border-white transition">
-            <span className="text-4xl text-slate-200">→</span>
-          </div>
-        </div>
+          Next
+        </button>
       </div>
     </div>
   );
