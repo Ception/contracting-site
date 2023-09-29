@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 export const ReviewsSection = () => {
   const [reviews, setReviews] = useState(null);
@@ -41,9 +42,17 @@ export const ReviewsSection = () => {
           Reviews
         </h2>
       </div>
-      <div className="flex justify-start gap-x-5">
+      <div className="relative flex justify-start gap-x-5">
         {reviews.slice(startIndex, startIndex + 3).map((review, index) => (
-          <div key={index} className="w-1/3 p-5">
+          <motion.div
+            key={`${index}-${startIndex}`}
+            className="w-1/3 p-5"
+            style={{ zIndex: 3 - index }}
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 100 }}
+            transition={{ duration: 0.3, ease: "easeIn", delay: index * 0.1 }}
+          >
             <div className="h-72 px-6 py-8 bg-black border border-gray-900 border-opacity-30 rounded-3xl flex flex-col">
               <h3 className="font-heading mb-4 text-2xl text-slate-200 tracking-tighter leading-tight">
                 {review.customer_name}
@@ -66,16 +75,17 @@ export const ReviewsSection = () => {
                   ))}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
       <div className="text-center mt-8">
-        <button
+        <motion.button
           onClick={() => nextReview()}
           className="px-8 py-2 bg-black text-slate-200 hover:bg-gray-800 transition rounded"
+          whileHover={{ scale: 1.05 }}
         >
           Next
-        </button>
+        </motion.button>
       </div>
     </div>
   );
