@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export const ServicesSection = () => {
   const [selectedService, setSelectedService] = useState("Landscaping");

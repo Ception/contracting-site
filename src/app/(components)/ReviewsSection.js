@@ -33,7 +33,12 @@ export const ReviewsSection = () => {
       .catch((error) => console.error("Error:", error));
   }, []);
 
-  if (!reviews) return <div>Loading...</div>;
+  if (!reviews)
+    return (
+      <div className="loader-container bg-red-700">
+        <div className="loader"></div>
+      </div>
+    );
 
   return (
     <div className="bg-red-700 p-6">

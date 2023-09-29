@@ -9,7 +9,6 @@ export async function GET() {
       params: {
         place_id: process.env.PLACE_ID,
         fields: ["review"],
-        key: process.env.API_KEY,
       },
       timeout: 1000,
     });
@@ -22,12 +21,12 @@ export async function GET() {
         review: review.text,
         rating: review.rating,
       }));
-      return NextResponse.json({ reviews }); 
+      return NextResponse.json({ reviews });
     } else {
-      return NextResponse.status(400).json({ error: r.data.status }); 
+      return NextResponse.status(400).json({ error: r.data.status });
     }
   } catch (e) {
     console.error(e.response?.data?.error_message);
-    return NextResponse.status(500).json({ error: "Failed to fetch reviews" }); 
+    return NextResponse.status(500).json({ error: "Failed to fetch reviews" });
   }
 }
