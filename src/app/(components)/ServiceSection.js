@@ -45,7 +45,7 @@ export const ServicesSection = () => {
             creating a perfect space—be it residential, commercial, or
             industrial—is a comprehensive process. Our range of exterior
             services is designed to meet the unique needs of each phase,
-            ensuring not just utility but also an aesthetic you'll love.
+            ensuring not just utility but also an aesthetic you&apos;ll love.
           </p>
           <div>
             {["Landscaping", "Interior", "Exterior"].map((service) => (
@@ -102,6 +102,7 @@ const Landscaping = () => {
             <li className="flex items-center mb-4">
               <div className="flex items-center justify-center w-5 h-5 mr-4 border border-green-400 rounded-full">
                 <Image
+                  alt="check"
                   src="/check.png"
                   width={15}
                   height={15}
@@ -113,6 +114,7 @@ const Landscaping = () => {
             <li className="flex items-center mb-4">
               <div className="flex items-center justify-center w-5 h-5 mr-4 border border-green-400 rounded-full">
                 <Image
+                  alt="check"
                   src="/check.png"
                   width={15}
                   height={15}
@@ -146,6 +148,7 @@ const Landscaping = () => {
             <li className="flex items-center mb-4">
               <div className="flex items-center justify-center w-5 h-5 mr-4 border border-green-400 rounded-full">
                 <Image
+                  alt="check"
                   src="/check.png"
                   width={15}
                   height={15}
@@ -157,6 +160,7 @@ const Landscaping = () => {
             <li className="flex items-center mb-4">
               <div className="flex items-center justify-center w-5 h-5 mr-4 border border-green-400 rounded-full">
                 <Image
+                  alt="check"
                   src="/check.png"
                   width={15}
                   height={15}
@@ -189,6 +193,7 @@ const Landscaping = () => {
             <li className="flex items-center mb-4">
               <div className="flex items-center justify-center w-5 h-5 mr-4 border border-green-400 rounded-full">
                 <Image
+                  alt="check"
                   src="/check.png"
                   width={15}
                   height={15}
@@ -200,6 +205,7 @@ const Landscaping = () => {
             <li className="flex items-center mb-4">
               <div className="flex items-center justify-center w-5 h-5 mr-4 border border-green-400 rounded-full">
                 <Image
+                  alt="check"
                   src="/check.png"
                   width={15}
                   height={15}
@@ -238,6 +244,7 @@ const Interior = () => {
             <li className="flex items-center mb-4">
               <div className="flex items-center justify-center w-5 h-5 mr-4 border border-green-400 rounded-full">
                 <Image
+                  alt="check"
                   src="/check.png"
                   width={15}
                   height={15}
@@ -249,6 +256,7 @@ const Interior = () => {
             <li className="flex items-center mb-4">
               <div className="flex items-center justify-center w-5 h-5 mr-4 border border-green-400 rounded-full">
                 <Image
+                  alt="check"
                   src="/check.png"
                   width={15}
                   height={15}
@@ -260,6 +268,7 @@ const Interior = () => {
             <li className="flex items-center mb-4">
               <div className="flex items-center justify-center w-5 h-5 mr-4 border border-green-400 rounded-full">
                 <Image
+                  alt="check"
                   src="/check.png"
                   width={15}
                   height={15}
@@ -292,6 +301,7 @@ const Interior = () => {
             <li className="flex items-center mb-4">
               <div className="flex items-center justify-center w-5 h-5 mr-4 border border-green-400 rounded-full">
                 <Image
+                  alt="check"
                   src="/check.png"
                   width={15}
                   height={15}
@@ -303,6 +313,7 @@ const Interior = () => {
             <li className="flex items-center mb-4">
               <div className="flex items-center justify-center w-5 h-5 mr-4 border border-green-400 rounded-full">
                 <Image
+                  alt="check"
                   src="/check.png"
                   width={15}
                   height={15}
@@ -314,6 +325,7 @@ const Interior = () => {
             <li className="flex items-center mb-4">
               <div className="flex items-center justify-center w-5 h-5 mr-4 border border-green-400 rounded-full">
                 <Image
+                  alt="check"
                   src="/check.png"
                   width={15}
                   height={15}
@@ -346,6 +358,7 @@ const Interior = () => {
             <li className="flex items-center mb-4">
               <div className="flex items-center justify-center w-5 h-5 mr-4 border border-green-400 rounded-full">
                 <Image
+                  alt="check"
                   src="/check.png"
                   width={15}
                   height={15}
@@ -357,6 +370,7 @@ const Interior = () => {
             <li className="flex items-center mb-4">
               <div className="flex items-center justify-center w-5 h-5 mr-4 border border-green-400 rounded-full">
                 <Image
+                  alt="check"
                   src="/check.png"
                   width={15}
                   height={15}
@@ -368,6 +382,7 @@ const Interior = () => {
             <li className="flex items-center mb-4">
               <div className="flex items-center justify-center w-5 h-5 mr-4 border border-green-400 rounded-full">
                 <Image
+                  alt="check"
                   src="/check.png"
                   width={15}
                   height={15}
@@ -407,6 +422,7 @@ const Exterior = ({ services }) => {
                   <li className="flex items-center mb-4" key={item}>
                     <div className="flex items-center justify-center w-5 h-5 mr-4 border border-green-400 rounded-full">
                       <Image
+                        alt="check"
                         src="/check.png"
                         width={15}
                         height={15}

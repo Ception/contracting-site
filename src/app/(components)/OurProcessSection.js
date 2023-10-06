@@ -23,11 +23,11 @@ export const OurProcessSection = () => {
             >
               <h2 className="font-semibold">Consultation</h2>
               <p>
-                Your dream project starts with a thorough consultation. We'll
-                discuss your vision, take measurements, and get an understanding
-                of your desired functionality and aesthetic. We believe in
-                involving our clients from the get-go to ensure that your
-                requirements and budget are precisely met.
+                Your dream project starts with a thorough consultation.
+                We&apos;ll discuss your vision, take measurements, and get an
+                understanding of your desired functionality and aesthetic. We
+                believe in involving our clients from the get-go to ensure that
+                your requirements and budget are precisely met.
               </p>
             </div>
             <div className="w-1/2 px-4 transition-all duration-500 ease-in-out transform hover:scale-110">
@@ -58,8 +58,8 @@ export const OurProcessSection = () => {
                 We believe in full transparency, so we provide an itemized quote
                 outlining the cost of labor, materials, and other potential
                 expenditures. This will give you a comprehensive understanding
-                of what you're investing in, empowering you to make informed
-                decisions.
+                of what you&apros;re investing in, empowering you to make
+                informed decisions.
               </p>
             </div>
           </div>
@@ -76,8 +76,8 @@ export const OurProcessSection = () => {
               <p>
                 Our design team will create a tailored plan incorporating your
                 preferences and needs. From securing permits to reviewing
-                layouts, every step is meticulously planned. We'll review these
-                plans with you to make any necessary adjustments before
+                layouts, every step is meticulously planned. We&apos;ll review
+                these plans with you to make any necessary adjustments before
                 beginning construction, ensuring that your vision is fully
                 realized.
               </p>

@@ -21,7 +21,7 @@ export default function Page() {
         id="index-div"
       >
         <div className="image-container-index items-center px-6 py-4 h-[40rem] bg-gray-800 shadow-md bg-no-repeat bg-cover overflow-auto">
-          <div style={{ backgroundImage: `url('/SearleLogo.jpeg')` }}></div>
+          <div style={{ backgroundImage: `url('/HeroImage.png')` }}></div>
           <div className="text-slate-200 mt-28 ml-12 w-full md:w-1/2 p-8">
             <h2 className="mb-6 text-7xl text-slate-200 tracking-8xl md:max-w-sm">
               Searle Contracting

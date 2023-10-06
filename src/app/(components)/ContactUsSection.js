@@ -16,6 +16,7 @@ export const ContactUsSection = () => {
           <div className="h-full overflow-hidden">
             <Image
               className="w-full h-full object-cover transform hover:scale-105 transition duration-500"
+              alt="Searle Quality Contracting"
               src="/SearleLogo.jpeg"
               width={200}
               height={250}
@@ -34,7 +35,7 @@ export const ContactUsSection = () => {
               </h2>
               <p className="mb-20 text-xl text-gray-300 tracking-tight">
                 Initiate your journey towards a beautiful, functional space by
-                providing your email below. Let's discuss how we can bring your
+                providing your email below. Let&apos;s discuss how we can bring your
                 vision to life.
               </p>
               <div className="flex flex-wrap -m-1.5 mb-5">
