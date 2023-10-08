@@ -75,13 +75,30 @@ html {
 
 .image-container-index {
   position: relative;
-  background-size: cover; /* Set the background size to auto 100% */
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  height: 100vh;
+  height: calc(
+    100vh - 64px
+  ); /* Assuming a header height of 64px. Adjust if different. */
   width: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("/Hero.png");
+  display: flex;
+  align-items: center;
+  justify-content: center; /* This centers the content of the container */
+  padding: 1rem; /* Give it a bit of padding, especially for mobile devices */
+}
+
+@media screen and (max-width: 640px) {
+  /* Tailwind's default breakpoint for small screens */
+  h2 {
+    font-size: 4rem;
+  }
+
+  p {
+    font-size: 0.875rem;
+  }
 }
 
 @keyframes bounce {
@@ -98,6 +115,10 @@ html {
   60% {
     transform: translateY(-5px);
   }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
 }
 
 .custom-shape-divider-top-1693420302 {

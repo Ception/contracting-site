@@ -17,12 +17,14 @@ export default function Page() {
   return (
     <div>
       <Header />
-      <div className="image-container-index flex items-center justify-center px-6 py-4 h-screen shadow-md overflow-auto">
-        <div className="text-slate-200 p-8">
-          <h2 className="mb-6 text-7xl text-slate-200 tracking-8xl md:max-w-sm">
+      <div className="image-container-index flex items-center justify-center px-6 py-4 h-screen shadow-md overflow-auto relative">
+        {" "}
+        {/* 'relative' is already present from the previous step */}
+        <div className="text-slate-200 p-8 max-w-2xl text-center">
+          <h2 className="mb-4 text-6xl text-slate-200 tracking-tight md:text-7xl">
             Searle Contracting
           </h2>
-          <p className="mb-6 text-slate-200 text-opacity-60 md:max-w-xs">
+          <p className="mb-6 text-lg text-slate-200 text-opacity-75 leading-relaxed">
             Welcome to Searle Quality Contracting, the go-to source for
             exceptional renovation services in the Halton region. With over five
             years of experience, we specialize in quality craftsmanship and
@@ -30,11 +32,31 @@ export default function Page() {
             communication from start to finish, making your renovation
             experience stress-free.
           </p>
+
           <Link href="#contact-us" passHref>
-            <span className="cursor-pointer inline-block px-2 lg:px-4 py-1 lg:py-2 text-slate-200 text-sm lg:text-base md:text-lg font-medium bg-green-500 border border-transparent hover:bg-slate-700 focus:border-green-500 focus:border-opacity-40 focus:ring-4 focus:ring-green-500 focus:ring-opacity-40 rounded-lg transition duration-300">
+            <span className="cursor-pointer inline-block px-2 lg:px-4 py-1 lg:py-2 text-slate-200 text-sm lg:text-base md:text-lg font-medium bg-green-500 border border-transparent hover:bg-slate-100 hover:text-red-700 focus:border-green-500 focus:border-opacity-40 focus:ring-4 focus:ring-green-500 focus:ring-opacity-40 rounded-lg transition duration-300 mt-6 lg:inline-block">
               Get in Touch
             </span>
           </Link>
+        </div>
+        {/* Subtle Bouncing Arrow */}
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="animate-bounce"
+          >
+            <path
+              d="M12 2V22M22 12L12 22L2 12"
+              stroke="white"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
         </div>
       </div>
 
