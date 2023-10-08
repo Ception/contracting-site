@@ -16,29 +16,23 @@ export default function Page() {
   return (
     <div>
       <Header />
-      <div
-        className="w-full transition-all duration-500 ease-in-out transform"
-        id="index-div"
-      >
-        <div className="image-container-index items-center px-6 py-4 h-[40rem] bg-gray-800 shadow-md bg-no-repeat bg-cover overflow-auto">
-          <div style={{ backgroundImage: `url('/HeroImage.png')` }}></div>
-          <div className="text-slate-200 mt-28 ml-12 w-full md:w-1/2 p-8">
-            <h2 className="mb-6 text-7xl text-slate-200 tracking-8xl md:max-w-sm">
-              Searle Contracting
-            </h2>
-            <p className="mb-6 text-slate-200 text-opacity-60 md:max-w-xs">
-              Welcome to Searle Quality Contracting, the go-to source for
-              exceptional renovation services in the Halton region. With over
-              five years of experience, we specialize in quality craftsmanship
-              and seamless project execution. Our professional team ensures
-              clear communication from start to finish, making your renovation
-              experience stress-free.
-            </p>
-          </div>
+      <div className="image-container-index flex items-center justify-center px-6 py-4 h-screen shadow-md overflow-auto">
+        <div className="text-slate-200 p-8">
+          <h2 className="mb-6 text-7xl text-slate-200 tracking-8xl md:max-w-sm">
+            Searle Contracting
+          </h2>
+          <p className="mb-6 text-slate-200 text-opacity-60 md:max-w-xs">
+            Welcome to Searle Quality Contracting, the go-to source for
+            exceptional renovation services in the Halton region. With over five
+            years of experience, we specialize in quality craftsmanship and
+            seamless project execution. Our professional team ensures clear
+            communication from start to finish, making your renovation
+            experience stress-free.
+          </p>
         </div>
       </div>
 
-      <div className="custom-shape-divider-top-1693420571 bg-red-700">
+      {/* <div className="custom-shape-divider-top-1693420571 bg-red-700">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +44,7 @@ export default function Page() {
             className="shape-fill"
           ></path>
         </svg>
-      </div>
+      </div> */}
 
       <section id="about-us">
         <AboutUS />

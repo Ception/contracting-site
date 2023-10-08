@@ -2,23 +2,25 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { animateScroll } from "react-scroll";
 
 export default function Header() {
   const router = useRouter();
 
   function navigateToHome() {
-    router.push("/");
+    // router.push("/");
+    animateScroll.scrollToTop();
   }
 
   return (
-    <header className="p-4 bg-red-700 text-slate-200 drop-shadow-xl">
+    <header className="fixed top-0 left-0 w-full p-4 bg-red-700 text-slate-200 drop-shadow-xl z-50">
       <nav className="container mx-auto flex items-center justify-between flex-wrap p-4">
         <div className="flex items-center flex-no-shrink text-slate-200 mr-6 cursor-pointer transform hover:scale-105 transition-transform duration-500">
           <span
             className="text-3xl font-bold tracking-wider italic"
             onClick={navigateToHome}
           >
-            Searle Quality Contracting
+            SQC
           </span>
         </div>
         <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
