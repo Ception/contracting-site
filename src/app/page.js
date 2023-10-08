@@ -9,6 +9,7 @@ import { ContactInfoSection } from "./(components)/ContactInfoSection";
 import { ContactUsSection } from "./(components)/ContactUsSection";
 import { OurProcessSection } from "./(components)/OurProcessSection";
 import { ReviewsSection } from "./(components)/ReviewsSection";
+import Link from "next/link";
 import Header from "./(components)/Header";
 import Footer from "./(components)/Footer";
 
@@ -29,6 +30,11 @@ export default function Page() {
             communication from start to finish, making your renovation
             experience stress-free.
           </p>
+          <Link href="#contact-us" passHref>
+            <span className="cursor-pointer inline-block px-2 lg:px-4 py-1 lg:py-2 text-slate-200 text-sm lg:text-base md:text-lg font-medium bg-green-500 border border-transparent hover:bg-slate-700 focus:border-green-500 focus:border-opacity-40 focus:ring-4 focus:ring-green-500 focus:ring-opacity-40 rounded-lg transition duration-300">
+              Get in Touch
+            </span>
+          </Link>
         </div>
       </div>
 
