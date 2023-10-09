@@ -8,18 +8,25 @@ export const GallerySection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [categoryImages, setCategoryImages] = useState({});
 
-  useEffect(() => {
-    async function fetchImages() {
-      const res = await fetch(`/api/images?category=${selectedCategory}`);
-      const data = await res.json();
-      setCategoryImages((prevState) => ({
-        ...prevState,
-        [selectedCategory]: data,
-      }));
-    }
+  // useEffect(() => {
+  //   async function fetchImages() {
+  //     console.log("INSIDE fetchImages");
+  //     const res = await fetch(`/api/images?category=${selectedCategory}`, {
+  //       cache: "no-store",
+  //     });
+  //     if (!res.ok) {
+  //       console.log("Error fetching images");
+  //       return;
+  //     }
+  //     const data = await res.json();
+  //     setCategoryImages((prevState) => ({
+  //       ...prevState,
+  //       [selectedCategory]: data,
+  //     }));
+  //   }
 
-    fetchImages();
-  }, [selectedCategory]);
+  //   fetchImages();
+  // }, [selectedCategory]);
 
   const imageKeys = categoryImages[selectedCategory]
     ? Object.keys(categoryImages[selectedCategory])

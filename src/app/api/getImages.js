@@ -2,7 +2,10 @@ import fs from "fs";
 import path from "path";
 
 export default async function GET(req, res) {
+  console.log("INSIDE getImages.js");
   const category = req.query.category;
+
+  console.log("hello");
 
   if (!category) {
     return res.status(400).json({ error: "Category is required" });
