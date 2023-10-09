@@ -6,10 +6,16 @@ export async function GET(req) {
   // console.log("INSIDE route.js");
   const { searchParams } = new URL(req.url);
   const category = searchParams.get("category");
-  const res = NextResponse.next();
+  const res = NextResponse;
 
-  if (!category || category.length === 0) {
-    return res.json({ error: "Category is required" });
+  if (
+    !category ||
+    category.length === 0 ||
+    category === null ||
+    searchParams.length === 0 ||
+    !searchParams
+  ) {
+    return res.json({ error: "Category is required" }, { status: 400 });
   }
 
   const directoryPath = path.join(process.cwd(), `public/${category}`);
@@ -23,12 +29,15 @@ export async function GET(req) {
           file.endsWith(".png")
       );
 
-    console.log(`Found ${files.length} files in ${category} directory`);
-    console.log(files);
-    return res.json({ files });
+    // console.log(`Found ${files.length} files in ${category} directory`);
+    // console.log(files);
+    return res.json({ files }, { status: 200 });
   } catch (err) {
-    return res.json({
-      error: `Unable to read directory: ${err.message}`,
-    });
+    return res.json(
+      {
+        error: `Unable to read directory: ${err.message}`,
+      },
+      { status: 500 }
+    );
   }
 }
