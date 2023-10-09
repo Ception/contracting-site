@@ -44,20 +44,17 @@ export const ContactInfoSection = () => {
           <div className="px-6 py-4 bg-red-100">
             <h3 className="font-bold text-2xl mb-2">Website</h3>
             <p className="text-gray-700 text-lg">
-              Click Below:
+              Through our website below
               <br /> {/* Keer br for fitting in the container */}
               <a
-                href="https://www.ThisIsTheWebsite.com"
+                href="https://www.searlequalitycontracting.com/#contact-us"
                 className="text-blue-600"
               >
-                www.ThisIsTheWebsite.com
+                searlequalitycontracting.com
               </a>
             </p>
           </div>
         </div>
-      </div>
-      <div className="text-center mt-8 font-semibold text-lg text-slate-200">
-        <p>Fully insured.</p>
       </div>
     </div>
   );

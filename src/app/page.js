@@ -20,7 +20,7 @@ export default function Page() {
       <div className="image-container-index flex items-center justify-center px-6 py-4 h-screen shadow-md overflow-auto relative">
         {" "}
         {/* 'relative' is already present from the previous step */}
-        <div className="text-slate-200 p-8 max-w-2xl text-center">
+        <div className="text-slate-200 p-8 max-w-3xl text-center">
           <h2 className="mb-4 text-6xl text-slate-200 tracking-tight md:text-7xl">
             Searle Contracting
           </h2>
