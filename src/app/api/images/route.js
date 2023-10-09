@@ -1,8 +1,8 @@
 import fs from "fs";
 import path from "path";
 
-export default async function handler(req, res) {
-  const category = req.query.category;
+export async function GET(req, res) {
+  const { category } = req.query;
 
   if (!category) {
     return res.status(400).json({ error: "Category is required" });

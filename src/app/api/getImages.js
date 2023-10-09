@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-export default async function handler(req, res) {
+export default async function GET(req, res) {
   const category = req.query.category;
 
   if (!category) {

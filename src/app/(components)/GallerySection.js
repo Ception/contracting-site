@@ -10,7 +10,7 @@ export const GallerySection = () => {
 
   useEffect(() => {
     async function fetchImages() {
-      const res = await fetch(`/api/getImages?category=${selectedCategory}`);
+      const res = await fetch(`/api/images?category=${selectedCategory}`);
       const data = await res.json();
       setCategoryImages((prevState) => ({
         ...prevState,

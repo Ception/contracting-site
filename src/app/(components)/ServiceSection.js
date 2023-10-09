@@ -17,7 +17,7 @@ export const ServicesSection = () => {
             creating a perfect space—be it residential, commercial, or
             industrial—is a comprehensive process. Our range of services is
             designed to meet the unique needs of each phase, ensuring not just
-            utility but also an aesthetic you'll love.
+            utility but also an aesthetic you will love.
           </p>
           <div>
             {["Landscaping", "Interior", "Exterior"].map((service) => (
