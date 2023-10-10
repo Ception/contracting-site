@@ -9,7 +9,7 @@ export const ServicesSection = () => {
     <div className="bg-black p-6">
       <div className="container px-4 mx-auto">
         <div className="mb-20 md:max-w-2xl text-center mx-auto">
-          <h2 className="mb-8 text-7xl lg:text-8xl text-slate-200 tracking-7xl lg:tracking-8xl">
+          <h2 className="mb-8 text-5xl md:text-7xl lg:text-8xl text-slate-200 tracking-7xl lg:tracking-8xl">
             Our Services
           </h2>
           <p className="mb-12 text-gray-300 mx-auto">
@@ -26,7 +26,7 @@ export const ServicesSection = () => {
                 whileFocus={{ scale: 0.95 }}
                 key={service}
                 onClick={() => setSelectedService(service)}
-                className={`inline-block px-4 py-2 m-1 cursor-pointer hover:bg-gray-300 hover:text-slate-800 hover:rounded transition ${
+                className={`inline-block px-2 md:px-4 py-1 md:py-2 m-1 cursor-pointer hover:bg-gray-300 hover:text-slate-800 hover:rounded transition ${
                   selectedService === service
                     ? "bg-new-gray text-black rounded"
                     : "text-slate-200"

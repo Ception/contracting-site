@@ -11,7 +11,7 @@ export const ContactUsSection = () => {
 
   return (
     <section className="bg-black overflow-hidden">
-      <div className="flex flex-wrap -m-8 lg:-m-14">
+      <div className="flex flex-wrap -m-4 md:-m-8 lg:-m-14">
         <div className="w-full md:w-5/12 p-8 lg:p-14">
           <div className="h-full overflow-hidden">
             <Image
@@ -35,8 +35,8 @@ export const ContactUsSection = () => {
               </h2>
               <p className="mb-20 text-xl text-gray-300 tracking-tight">
                 Initiate your journey towards a beautiful, functional space by
-                providing your email below. Let&apos;s discuss how we can bring your
-                vision to life.
+                providing your email below. Let&apos;s discuss how we can bring
+                your vision to life.
               </p>
               <div className="flex flex-wrap -m-1.5 mb-5">
                 <div className="w-auto p-1.5">

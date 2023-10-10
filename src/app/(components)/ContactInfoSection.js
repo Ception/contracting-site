@@ -1,10 +1,10 @@
 export const ContactInfoSection = () => {
   return (
-    <div className="bg-red-700 py-16">
-      <h2 className="text-center text-4xl font-extrabold text-slate-200 mb-8">
+    <div className="bg-red-700 py-8 md:py-16">
+      <h2 className="text-center text-3xl md:text-4xl font-extrabold text-slate-200 mb-8">
         Contact Information
       </h2>
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="container mx-auto px-4 md:px-8 lg:px-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
         <div className="rounded-lg overflow-hidden shadow-2xl transform transition-transform duration-500 ease-in-out hover:scale-105">
           <div className="px-6 py-4 bg-red-100">
             <h3 className="font-bold text-2xl mb-2">Working Hours</h3>

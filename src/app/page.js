@@ -17,14 +17,12 @@ export default function Page() {
   return (
     <div>
       <Header />
-      <div className="image-container-index flex items-center justify-center px-6 py-4 h-screen shadow-md overflow-auto relative">
-        {" "}
-        {/* 'relative' is already present from the previous step */}
-        <div className="text-slate-200 p-8 max-w-3xl text-center">
-          <h2 className="mb-4 text-6xl text-slate-200 tracking-tight md:text-7xl">
+      <div className="image-container-index flex flex-col items-center justify-center px-6 py-4 md:h-screen shadow-md overflow-auto relative">
+        <div className="text-slate-200 p-4 md:p-8 max-w-sm md:max-w-3xl text-center">
+          <h2 className="mb-4 text-4xl md:text-6xl text-slate-200 tracking-tight">
             Searle Contracting
           </h2>
-          <p className="mb-6 text-lg text-slate-200 text-opacity-75 leading-relaxed">
+          <p className="mb-6 text-sm md:text-lg text-slate-200 text-opacity-75 leading-relaxed">
             Welcome to Searle Quality Contracting, the go-to source for
             exceptional renovation services in the Halton region. With over five
             years of experience, we specialize in quality craftsmanship and
@@ -34,7 +32,7 @@ export default function Page() {
           </p>
 
           <Link href="#contact-us" passHref>
-            <span className="cursor-pointer inline-block px-2 lg:px-4 py-1 lg:py-2 text-slate-200 text-sm lg:text-base md:text-lg font-medium bg-red-700 border border-transparent hover:bg-slate-100 hover:text-red-700 focus:border-green-500 focus:border-opacity-40 focus:ring-4 focus:ring-slate-600 focus:ring-opacity-40 rounded-lg transition duration-300 mt-6 lg:inline-block">
+            <span className="cursor-pointer inline-block px-2 py-1 text-sm md:text-base font-medium bg-red-700 border border-transparent hover:bg-slate-100 hover:text-red-700 focus:border-green-500 focus:border-opacity-40 focus:ring-4 focus:ring-slate-600 focus:ring-opacity-40 rounded-lg transition duration-300 mt-6">
               Get in Touch
             </span>
           </Link>

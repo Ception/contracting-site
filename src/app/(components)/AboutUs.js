@@ -3,8 +3,8 @@ import Image from "next/image";
 export const AboutUS = () => {
   return (
     <section className="text-slate-200 body-font bg-red-700">
-      <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 shadow-lg rounded-lg overflow-hidden">
+      <div className="container mx-auto flex px-5 py-24 flex-col md:flex-row items-center">
+        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-full mb-10 md:mb-0 shadow-lg rounded-lg overflow-hidden">
           <Image
             className="object-cover object-center w-full h-full transform hover:scale-105 transition-transform duration-500"
             alt="Searle Logo"
@@ -13,8 +13,8 @@ export const AboutUS = () => {
             height={300}
           />
         </div>
-        <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-slate-200">
+        <div className="lg:flex-grow md:w-1/2 lg:pl-6 md:pl-4 flex flex-col md:items-start md:text-left items-center text-center mt-10 md:mt-0">
+          <h1 className="title-font sm:text-4xl text-2xl mb-4 font-medium text-slate-200">
             About Us
           </h1>
           <p className="mb-8 leading-relaxed">
