@@ -17,9 +17,9 @@ export const GallerySection = () => {
 
   useEffect(() => {
     async function fetchImages() {
-      console.log("INSIDE fetchImages");
       const res = await fetch(`/api/images?category=${selectedCategory}`, {
         cache: "no-store", // Disable cache for development
+        // add cache for production
       });
       if (!res.ok) {
         console.log("Error fetching images");
@@ -38,8 +38,6 @@ export const GallerySection = () => {
   const imageKeys = categoryImages[selectedCategory]
     ? Object.keys(categoryImages[selectedCategory])
     : [];
-
-  // console.log("imageKeys", imageKeys);
 
   return (
     <div className="bg-red-700 pt-6 px-8 relative flex h-4/5">
@@ -82,10 +80,12 @@ export const GallerySection = () => {
                 {imageKeys.map((key, index) => (
                   <Slide index={index} key={key}>
                     <Image
-                      className="object-cover rounded"
+                      className="object-cover rounded absolute inset-0"
                       src={`/${selectedCategory}/${categoryImages[selectedCategory][key]}`}
                       alt={categoryImages[selectedCategory][key]}
-                      layout="fill"
+                      fill={true}
+                      sizes="(max-width: 768px) 100vw"
+                      loading="lazy"
                     />
                   </Slide>
                 ))}
@@ -130,14 +130,16 @@ export const GallerySection = () => {
         )}
       </div>
 
-      <div className="flex-1 p-6 flex flex-col justify-center">
-        <h2 className="text-5xl font-bold mb-4 text-white text-left">
-          Gallery
-        </h2>
-        <p className="text-white font-light text-left ml-auto mr-16 my-auto">
-          At Searle Contracting, our gallery showcases masterful projects,
-          reflecting excellence and attention to detail. Explore our journey
-          from visions to remarkable realities.
+      <div className="flex-1 flex flex-col justify-center items-left p-6">
+        <h2 className="text-5xl font-bold text-white mb-4">Gallery</h2>
+        <p className="text-white font-light text-left px-auto">
+          At Searle Contracting, our gallery is a testament to our dedication
+          and expertise, showcasing masterful projects that stand as a hallmark
+          of excellence and meticulous attention to detail. Each image is a
+          narrative, portraying our journey of transforming mere visions into
+          remarkable, tangible realities. We invite you to explore this visual
+          narrative and delve into the artistry and technical prowess embodied
+          in every project we undertake.
         </p>
       </div>
     </div>

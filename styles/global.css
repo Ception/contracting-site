@@ -4,10 +4,7 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
-/* * { // for debugging purposes
-  border: 1px solid red !important;
-} */
-
+/* Custom CSS */
 .loader-container {
   display: flex;
   justify-content: center;
@@ -49,15 +46,27 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Define a new animation named arrow-bounce */
+@keyframes arrow-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Updated styles for scroll-btn and scroll-arrow */
 .scroll-btn {
   position: fixed;
   bottom: 50px;
   right: 50px;
-  width: 50px;
-  height: 50px;
-  background-color: rgb(255, 255, 255, 0.8);
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
   border: none;
-  border-radius: 50%;
+  border-radius: 15%;
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
@@ -67,12 +76,18 @@ html {
 }
 
 .scroll-btn:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: #cc0000;
 }
 
 .scroll-arrow {
   width: 24px;
-  animation: bounce 3s infinite;
+  height: 24px;
+  /* animation: arrow-bounce 1s infinite; */
+  fill: currentColor;
+}
+
+.scroll-arrow:hover {
+  fill: #fff;
 }
 
 .image-container-index {

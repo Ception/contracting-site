@@ -3,7 +3,6 @@ import path from "path";
 import { NextResponse } from "next/server";
 
 export async function GET(req) {
-  // console.log("INSIDE route.js");
   const { searchParams } = new URL(req.url);
   const category = searchParams.get("category");
   const res = NextResponse;
@@ -28,9 +27,6 @@ export async function GET(req) {
           file.endsWith(".jpg") ||
           file.endsWith(".png")
       );
-
-    // console.log(`Found ${files.length} files in ${category} directory`);
-    // console.log(files);
     return res.json({ files }, { status: 200 });
   } catch (err) {
     return res.json(
