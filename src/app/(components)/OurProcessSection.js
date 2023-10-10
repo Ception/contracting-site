@@ -30,7 +30,7 @@ export const OurProcessSection = () => {
                 your requirements and budget are precisely met.
               </p>
             </div>
-            <div className="w-1/2 px-4 transition-all duration-500 ease-in-out transform hover:scale-110">
+            <div className="w-1/2 px-4">
               <Image
                 src="/SearleLogo.jpeg"
                 alt="Consultation"
@@ -41,7 +41,7 @@ export const OurProcessSection = () => {
           </div>
 
           <div className="relative w-full p-4 flex flex-wrap" id="quote">
-            <div className="w-1/2 px-4 transition-all duration-500 ease-in-out transform hover:scale-110">
+            <div className="w-1/2 px-4">
               <Image
                 src="/SearleLogo.jpeg"
                 alt="Quote"
@@ -82,7 +82,7 @@ export const OurProcessSection = () => {
                 realized.
               </p>
             </div>
-            <div className="w-1/2 px-4 transition-all duration-500 ease-in-out transform hover:scale-110">
+            <div className="w-1/2 px-4">
               <Image
                 src="/SearleLogo.jpeg"
                 alt="Design/Review/Plan"
@@ -96,7 +96,7 @@ export const OurProcessSection = () => {
             className="relative w-full p-4 flex flex-wrap"
             id="start-project"
           >
-            <div className="w-1/2 px-4 transition-all duration-500 ease-in-out transform hover:scale-110">
+            <div className="w-1/2 px-4">
               <Image
                 src="/SearleLogo.jpeg"
                 alt="Start Your Project"
