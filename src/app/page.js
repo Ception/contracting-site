@@ -40,7 +40,7 @@ export default function Page() {
           </Link>
         </div>
         {/* Subtle Bouncing Arrow */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2">
           <svg
             width="24"
             height="24"
