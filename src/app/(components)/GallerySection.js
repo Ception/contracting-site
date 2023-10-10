@@ -9,7 +9,7 @@ export const GallerySection = () => {
 
   useEffect(() => {
     async function fetchImages() {
-      console.log("INSIDE fetchImages");
+      // console.log("INSIDE fetchImages");
       const res = await fetch(`/api/images?category=${selectedCategory}`, {
         cache: "no-store", // Disable cache for development
       });
@@ -31,7 +31,7 @@ export const GallerySection = () => {
     ? Object.keys(categoryImages[selectedCategory])
     : [];
 
-  console.log("imageKeys", imageKeys);
+  // console.log("imageKeys", imageKeys);
 
   return (
     <div className="bg-red-700 p-6 relative">
@@ -46,7 +46,8 @@ export const GallerySection = () => {
                 }`}
                 src={`/${selectedCategory}/${categoryImages[selectedCategory][key]}`}
                 alt={categoryImages[selectedCategory][key]}
-                layout="fill"
+                width={400}
+                height={400}
               />
             ))}
           </div>
