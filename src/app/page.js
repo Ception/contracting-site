@@ -17,7 +17,7 @@ export default function Page() {
   return (
     <div>
       <Header />
-      <div className="flex flex-col items-center justify-center px-6 py-4 md:h-screen shadow-md overflow-auto relative">
+      <div className="flex flex-col items-center justify-center px-6 py-4 md:h-screen h-screen shadow-md overflow-auto relative">
         <Image
           src="/Hero.png"
           layout="fill"
@@ -48,7 +48,7 @@ export default function Page() {
           </Link>
         </div>
         {/* Subtle Bouncing Arrow */}
-        <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2">
+        <div className="absolute bottom-1 left-1/2 transform -translate-x-1/ z-50">
           <svg
             width="24"
             height="24"
@@ -58,9 +58,9 @@ export default function Page() {
             className="animate-bounce"
           >
             <path
-              d="M12 2V22M22 12L12 22L2 12"
+              d="M3 8L12 18L21 8"
               stroke="white"
-              strokeWidth="1.5"
+              strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
