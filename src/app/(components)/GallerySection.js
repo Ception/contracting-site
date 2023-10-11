@@ -83,7 +83,8 @@ export const GallerySection = () => {
                       className="object-cover rounded absolute inset-0"
                       src={`/${selectedCategory}/${categoryImages[selectedCategory][key]}`}
                       alt={categoryImages[selectedCategory][key]}
-                      fill={true}
+                      width={400}
+                      height={600}
                       sizes="(max-width: 768px) 100vw"
                       loading="lazy"
                     />

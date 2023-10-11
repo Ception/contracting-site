@@ -17,8 +17,18 @@ export default function Page() {
   return (
     <div>
       <Header />
-      <div className="image-container-index flex flex-col items-center justify-center px-6 py-4 md:h-screen shadow-md overflow-auto relative">
-        <div className="text-slate-200 p-4 md:p-8 max-w-sm md:max-w-3xl text-center">
+      <div className="flex flex-col items-center justify-center px-6 py-4 md:h-screen shadow-md overflow-auto relative">
+        <Image
+          src="/Hero.png"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          priority
+          alt="Hero Image"
+          className="z-0 w-full h-auto"
+        />
+        <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
+        <div className="text-slate-200 p-4 md:p-8 max-w-sm md:max-w-3xl text-center relative z-20">
           <h2 className="mb-4 text-4xl md:text-6xl text-slate-200 tracking-tight">
             Searle Contracting
           </h2>
