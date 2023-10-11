@@ -12,20 +12,24 @@ import { ReviewsSection } from "./(components)/ReviewsSection";
 import Link from "next/link";
 import Header from "./(components)/Header";
 import Footer from "./(components)/Footer";
+import heroImage from "../../public/Hero.png";
 
 export default function Page() {
   return (
     <div>
       <Header />
-      <div className="flex flex-col items-center justify-center px-6 py-4 md:h-screen h-screen shadow-md overflow-auto relative">
+      <div className="flex flex-col items-center justify-center px-6 py-4 md:h-screen h-screen shadow-md overflow-auto relative block">
         <Image
-          src="/Hero.png"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-          priority
-          alt="Hero Image"
           className="z-0 w-full h-auto"
+          src={heroImage}
+          alt="Hero Image"
+          style={{
+            objectFit: "cover",
+          }}
+          quality={100}
+          fill
+          placeholder="blur"
+          priority
         />
         <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
         <div className="text-slate-200 p-4 md:p-8 max-w-sm md:max-w-3xl text-center relative z-20">
