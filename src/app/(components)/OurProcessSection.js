@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SearleLogo from "../../../public/SearleLogo.jpeg";
 
 export const OurProcessSection = () => {
   return (
@@ -29,22 +30,12 @@ export const OurProcessSection = () => {
             </p>
           </div>
           <div className="hidden md:block px-4">
-            <Image
-              src="/SearleLogo.jpeg"
-              alt="Consultation"
-              width={600}
-              height={300}
-            />
+            <Image src={SearleLogo} alt="Consultation" />
           </div>
 
           {/* Quote */}
           <div className="hidden md:block px-4">
-            <Image
-              src="/SearleLogo.jpeg"
-              alt="Quote"
-              width={600}
-              height={300}
-            />
+            <Image src={SearleLogo} alt="Consultation" />
           </div>
           <div className="text-2xl text-slate-200 px-4 md:pl-16">
             <h2 className="font-semibold mb-4 text-xl md:text-2xl">Quote</h2>
@@ -71,22 +62,12 @@ export const OurProcessSection = () => {
             </p>
           </div>
           <div className="hidden md:block px-4">
-            <Image
-              src="/SearleLogo.jpeg"
-              alt="Design/Review/Plan"
-              width={600}
-              height={300}
-            />
+            <Image src={SearleLogo} alt="Consultation" />
           </div>
 
           {/* Start Your Project */}
           <div className="hidden md:block px-4">
-            <Image
-              src="/SearleLogo.jpeg"
-              alt="Start Your Project"
-              width={600}
-              height={300}
-            />
+            <Image src={SearleLogo} alt="Consultation" />
           </div>
           <div className="text-2xl text-slate-200 px-4 md:pr-16">
             <h2 className="font-semibold mb-4 text-xl md:text-2xl">

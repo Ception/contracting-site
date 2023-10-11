@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SearleLogo from "../../../public/SearleLogo.jpeg";
 
 export const AboutUS = () => {
   return (
@@ -8,9 +9,7 @@ export const AboutUS = () => {
           <Image
             className="object-cover object-center w-full h-full transform hover:scale-105 transition-transform duration-500"
             alt="Searle Logo"
-            src="/SearleLogo.jpeg"
-            width={500}
-            height={300}
+            src={SearleLogo}
           />
         </div>
         <div className="lg:flex-grow md:w-1/2 lg:pl-6 md:pl-4 flex flex-col md:items-start md:text-left items-center text-center mt-10 md:mt-0">

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Modal } from "./PopUp";
+import SearleLogo from "../../../public/SearleLogo.jpeg";
 
 export const ContactUsSection = () => {
   const [email, setEmail] = useState("");
@@ -17,9 +18,7 @@ export const ContactUsSection = () => {
             <Image
               className="w-full h-full object-cover transform hover:scale-105 transition duration-500"
               alt="Searle Quality Contracting"
-              src="/SearleLogo.jpeg"
-              width={200}
-              height={250}
+              src={SearleLogo}
             />
           </div>
         </div>
