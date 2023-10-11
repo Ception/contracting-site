@@ -10,7 +10,7 @@ export function sendContactForm(email, name, date, message) {
     console.log(formData);
     mg.messages.create('sandboxec35ff63f0604609bc91f0944acb66d1.mailgun.org', {
         from: `${email} <mailgun@sandbox-123.mailgun.org>`,
-        to: ["medina.khe@gmail.com"],
+        to: ["smssearle@gmail.com"],
         subject: `New Booking Request | ${name}`,
         text: `${message} | ${date}`,
         html: `<h1>Testing some Mailgun awesomeness!</h1><br /><p> ${message} | ${date} </p>`
