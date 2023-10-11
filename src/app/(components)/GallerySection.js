@@ -40,8 +40,8 @@ export const GallerySection = () => {
     : [];
 
   return (
-    <div className="bg-red-700 pt-6 px-8 relative flex h-4/5">
-      <div className="flex-none w-1/3 h-full relative bg-white p-6 rounded-xl overflow-hidden shadow-xl">
+    <div className="bg-red-700 pt-6 px-8 relative flex flex-col md:flex-row h-4/5">
+      <div className="flex-none md:w-1/3 w-full h-full relative bg-white p-6 rounded-xl overflow-hidden shadow-xl">
         {/* Category Buttons */}
         <div className="absolute top-0 left-0 right-0 flex justify-center p-4">
           <button
@@ -83,7 +83,8 @@ export const GallerySection = () => {
                       className="object-cover rounded absolute inset-0"
                       src={`/${selectedCategory}/${categoryImages[selectedCategory][key]}`}
                       alt={categoryImages[selectedCategory][key]}
-                      fill={true}
+                      width={400}
+                      height={600}
                       sizes="(max-width: 768px) 100vw"
                       loading="lazy"
                     />
@@ -130,7 +131,7 @@ export const GallerySection = () => {
         )}
       </div>
 
-      <div className="flex-1 flex flex-col justify-center items-left p-6">
+      <div className="flex-1 flex flex-col justify-center items-left p-6 mt-10 md:mt-0">
         <h2 className="text-5xl font-bold text-white mb-4">Gallery</h2>
         <p className="text-white font-light text-left px-auto">
           At Searle Contracting, our gallery is a testament to our dedication

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Check from "../../../public/check.png";
 
 export const ServicesSection = () => {
   const [selectedService, setSelectedService] = useState("Landscaping");
@@ -9,7 +10,7 @@ export const ServicesSection = () => {
     <div className="bg-black p-6">
       <div className="container px-4 mx-auto">
         <div className="mb-20 md:max-w-2xl text-center mx-auto">
-          <h2 className="mb-8 text-7xl lg:text-8xl text-slate-200 tracking-7xl lg:tracking-8xl">
+          <h2 className="mb-8 text-5xl md:text-7xl lg:text-8xl text-slate-200 tracking-7xl lg:tracking-8xl">
             Our Services
           </h2>
           <p className="mb-12 text-gray-300 mx-auto">
@@ -26,7 +27,7 @@ export const ServicesSection = () => {
                 whileFocus={{ scale: 0.95 }}
                 key={service}
                 onClick={() => setSelectedService(service)}
-                className={`inline-block px-4 py-2 m-1 cursor-pointer hover:bg-gray-300 hover:text-slate-800 hover:rounded transition ${
+                className={`inline-block px-2 md:px-4 py-1 md:py-2 m-1 cursor-pointer hover:bg-gray-300 hover:text-slate-800 hover:rounded transition ${
                   selectedService === service
                     ? "bg-new-gray text-black rounded"
                     : "text-slate-200"
@@ -53,22 +54,22 @@ export const ServicesSection = () => {
 
 const LandscapingServices = [
   {
-    title: "Landscaping",
-    description:
-      "Transform your outdoor space with our innovative landscaping solutions.",
-    included: ["Grass Cutting", "Basic Planting"],
-  },
-  {
     title: "Building Decks",
     description:
       "Extend your living space outdoors with our custom-built decks.",
-    included: ["Design Consultation", "Material Selection"],
+    included: ["Design Consultation", "Material Selection", "Deck Maintenance"],
   },
   {
     title: "Fences",
     description:
       "Enhance your property’s privacy and aesthetic with our fence solutions.",
-    included: ["Repair Services", "New Installation"],
+    included: ["New Installation", "Custom Design", "Fence Repair"],
+  },
+  {
+    title: "Concrete",
+    description:
+      "Upgrade your outdoor space with our durable and stylish concrete solutions.",
+    included: ["Stamped Concrete", "Concrete Repair", "Concrete Sealing"],
   },
 ];
 
@@ -78,23 +79,22 @@ const InteriorServices = [
   {
     title: "Kitchens",
     description:
-      "Our kitchen services focus on creating both beautiful and functional spaces that meet your needs.",
+      "Create beautiful and functional kitchen spaces that meet your needs.",
     included: [
       "Cabinet Installation",
       "Countertop Replacement",
-      "Flooring and Tiling",
+      "Hardwood Installation",
     ],
   },
   {
     title: "Basements",
-    description:
-      "We specialize in transforming basements into functional and comfortable living spaces.",
+    description: "Transform basements into comfortable living spaces.",
     included: ["Waterproofing", "Insulation", "Flooring Installation"],
   },
   {
     title: "Flooring",
     description:
-      "Our flooring services offer a range of options including hardwood, laminate, and tile.",
+      "Offering a range of flooring options including hardwood, laminate, and tile.",
     included: ["Hardwood Installation", "Tile Installation", "Carpet Fitting"],
   },
 ];
@@ -103,29 +103,29 @@ const Interior = () => <ServicesComponent services={InteriorServices} />;
 
 const ExteriorServices = [
   {
+    title: "Siding",
+    description:
+      "Protect your home and enhance its curb appeal with our siding solutions.",
+    included: ["Material Selection", "Installation", "Repair Services"],
+  },
+  {
     title: "Framing",
     description:
       "Creating a solid and durable frame as the backbone for your construction project.",
     included: [
-      "Structural planning",
-      "Material selection",
-      "Quality inspection",
+      "Structural Planning",
+      "Material Selection",
+      "Quality Inspection",
     ],
   },
   {
     title: "Painting",
     description: "Adding color and finish to make your project come to life.",
     included: [
-      "Color consultation",
-      "Surface preparation",
-      "Finish application",
+      "Color Consultation",
+      "Surface Preparation",
+      "Finish Application",
     ],
-  },
-  {
-    title: "Sheds",
-    description:
-      "Designing and building sheds that serve multiple functionalities.",
-    included: ["Custom design", "Material sourcing", "Installation"],
   },
 ];
 
@@ -147,16 +147,13 @@ const ServicesComponent = ({ services }) => {
               {service.title}
             </p>
             <p className="mb-6 text-gray-300">{service.description}</p>
-            <p className="mb-6 text-xs text-gray-300 font-bold uppercase">
-              What is included
-            </p>
             <ul>
               {service.included.map((item) => (
                 <li className="flex items-center mb-4" key={item}>
                   <div className="flex items-center justify-center w-5 h-5 mr-4 border border-green-400 rounded-full">
                     <Image
                       alt="check"
-                      src="/check.png"
+                      src={Check}
                       width={15}
                       height={15}
                       className="rounded-full"

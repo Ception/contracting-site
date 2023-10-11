@@ -42,24 +42,24 @@ export const ReviewsSection = () => {
 
   return (
     <div className="bg-red-700 p-6">
-      <div className="mb-20 md:max-w-3xl text-center mx-auto">
-        <h2 className="text-7xl lg:text-8xl text-slate-200 tracking-tighter-xl">
+      <div className="mb-8 md:mb-20 md:max-w-3xl text-center mx-auto">
+        <h2 className="text-4xl md:text-7xl lg:text-8xl text-slate-200 tracking-tighter-xl">
           Reviews
         </h2>
       </div>
-      <div className="relative flex justify-start gap-x-5">
+      <div className="relative flex flex-wrap md:flex-nowrap justify-start gap-4 md:gap-x-5">
         {reviews.slice(startIndex, startIndex + 3).map((review, index) => (
           <motion.div
             key={`${index}-${startIndex}`}
-            className="w-1/3 p-5"
+            className="w-full md:w-1/3 p-3 md:p-5"
             style={{ zIndex: 3 - index }}
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 100 }}
             transition={{ duration: 0.3, ease: "easeIn", delay: index * 0.1 }}
           >
-            <div className="h-72 px-6 py-8 bg-black border border-gray-900 border-opacity-30 rounded-3xl flex flex-col">
-              <h3 className="font-heading mb-4 text-2xl text-slate-200 tracking-tighter leading-tight">
+            <div className="h-full md:h-72 px-4 md:px-6 py-4 md:py-8 bg-black border border-gray-900 border-opacity-30 rounded-3xl flex flex-col">
+              <h3 className="font-heading mb-2 md:mb-4 text-xl md:text-2xl text-slate-200 tracking-tighter leading-tight">
                 {review.customer_name}
               </h3>
               <p className="mb-4 text-slate-200 text-opacity-60 overflow-ellipsis overflow-hidden line-clamp-4 flex-grow">
@@ -86,7 +86,7 @@ export const ReviewsSection = () => {
       <div className="text-center mt-8">
         <motion.button
           onClick={() => nextReview()}
-          className="px-8 py-2 bg-black text-slate-200 hover:bg-gray-800 transition rounded"
+          className="px-6 md:px-8 py-2 bg-black text-slate-200 hover:bg-gray-800 transition rounded"
           whileHover={{ scale: 1.05 }}
         >
           Next

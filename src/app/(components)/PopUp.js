@@ -13,10 +13,7 @@ export const Modal = (email) => (
     nested
   >
     {(close) => (
-      <div
-        className="modal p-8 bg-black text-slate-200 w-full transform transition-transform duration-300 scale-90 hover:scale-100"
-        style={{ minWidth: "500px" }}
-      >
+      <div className="modal p-2 md:p-4 lg:p-8 bg-black text-slate-200 w-11/12 md:max-w-4/5 lg:max-w-3/4 transform transition-transform duration-300 scale-90 hover:scale-100">
         <button
           className="close text-slate-200 hover:text-red-700"
           onClick={close}
@@ -60,9 +57,9 @@ export const Modal = (email) => (
             </div>
           </form>
         </div>
-        <div className="actions flex justify-between">
+        <div className="actions flex flex-col sm:flex-row justify-between mt-4">
           <button
-            className="button p-2 bg-red-700 hover:bg-red-800 text-slate-200 rounded"
+            className="button p-2 bg-red-700 hover:bg-red-800 text-slate-200 rounded mb-2 sm:mb-0 sm:mr-2"
             onClick={() => {
               console.log("modal closed");
               close();
@@ -94,10 +91,10 @@ async function submitContactForm() {
     const name = document.getElementById("name").value;
     const date = document.getElementById("date").value;
     const message = document.getElementById("message").value;
+
     console.log(email, name, date, message);
 
     let response = await sendContactForm(email, name, date, message);
-
     console.log(response);
   } catch (error) {
     console.error(error);

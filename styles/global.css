@@ -9,12 +9,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* full viewport height */
+  height: 100vh;
 }
 
 .loader {
-  border: 6px solid #f3f3f3; /* Light grey */
-  border-top: 6px solid #3498db; /* Blue */
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -32,21 +32,20 @@
 
 .png-container {
   width: 100%;
-  height: 450px; /* Adjust the height as needed */
-  overflow: hidden; /* This will hide any part of the SVG that overflows the container */
+  height: 450px;
+  overflow: hidden;
 }
 
 .full-width-png {
   width: 100%;
   height: auto;
-  display: block; /* This removes any whitespace around the SVG */
+  display: block;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* Define a new animation named arrow-bounce */
 @keyframes arrow-bounce {
   0%,
   100% {
@@ -57,7 +56,6 @@ html {
   }
 }
 
-/* Updated styles for scroll-btn and scroll-arrow */
 .scroll-btn {
   position: fixed;
   bottom: 50px;
@@ -82,7 +80,6 @@ html {
 .scroll-arrow {
   width: 24px;
   height: 24px;
-  /* animation: arrow-bounce 1s infinite; */
   fill: currentColor;
 }
 
@@ -90,22 +87,6 @@ html {
   fill: #fff;
 }
 
-.image-container-index {
-  position: relative;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 100vh; /* Assuming a header height of 64px. Adjust if different. */
-  width: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("/Hero.png");
-  display: flex;
-  align-items: center;
-  justify-content: center; /* This centers the content of the container */
-  padding: 1rem; /* Give it a bit of padding, especially for mobile devices */
-}
-
-/* Carousel Dots */
 .carousel-dots {
   width: 100%;
   display: flex;
@@ -124,26 +105,14 @@ html {
 }
 
 .slick-active .dot {
-  background: #007bff; /* Blue, but you can change to any color */
+  background: #007bff;
   transform: scale(1.2);
 }
 
-/* Next/Prev Arrows (if you decide to use them in the future) */
 .slick-next:before,
 .slick-prev:before {
   color: #fff;
   font-size: 25px;
-}
-
-@media screen and (max-width: 640px) {
-  /* Tailwind's default breakpoint for small screens */
-  h2 {
-    font-size: 4rem;
-  }
-
-  p {
-    font-size: 0.875rem;
-  }
 }
 
 @keyframes bounce {
@@ -166,46 +135,8 @@ html {
   animation: bounce 1s infinite;
 }
 
-.custom-shape-divider-top-1693420302 {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.custom-shape-divider-top-1693420302 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 150px;
-}
-
-.custom-shape-divider-top-1693420302 .shape-fill {
-  fill: #b91c1c;
-}
-
-.custom-shape-divider-top-1693420398 {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.custom-shape-divider-top-1693420398 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 150px;
-}
-
-.custom-shape-divider-top-1693420398 .shape-fill {
-  fill: #000000;
-}
-
+.custom-shape-divider-top-1693420302,
+.custom-shape-divider-top-1693420398,
 .custom-shape-divider-top-1693420571 {
   position: relative;
   top: 0;
@@ -215,6 +146,8 @@ html {
   line-height: 0;
 }
 
+.custom-shape-divider-top-1693420302 svg,
+.custom-shape-divider-top-1693420398 svg,
 .custom-shape-divider-top-1693420571 svg {
   position: relative;
   display: block;
@@ -222,6 +155,66 @@ html {
   height: 150px;
 }
 
+.custom-shape-divider-top-1693420302 .shape-fill {
+  fill: #b91c1c;
+}
+.custom-shape-divider-top-1693420398 .shape-fill,
 .custom-shape-divider-top-1693420571 .shape-fill {
   fill: #000000;
+}
+
+/* Mobile Responsive Adjustments */
+@media screen and (max-width: 640px) {
+  .png-container {
+    height: 250px;
+  }
+
+  .loader-container,
+  .loader {
+    border-width: 4px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .image-container-index {
+    padding: 0.5rem;
+    height: 70vh;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .scroll-arrow {
+    width: 20px;
+    height: 20px;
+  }
+
+  .carousel-dots {
+    margin-top: 10px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    margin: 0 3px;
+  }
+
+  .modal {
+    padding: 1rem;
+    min-width: 250px; /* Adjust this if the modal is still too narrow on some devices */
+  }
+
+  .header {
+    font-size: 1.5rem;
+  }
+
+  .actions button {
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+  }
 }
