@@ -14,12 +14,9 @@ export const OurProcessSection = () => {
 
       <div className="mx-auto px-6 py-8 relative">
         <div className="hidden md:block absolute left-1/2 top-0 h-full w-px bg-white"></div>
-        <div className="flex flex-col space-y-12 md:space-y-0 md:grid md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Consultation */}
-          <div
-            className="text-2xl text-slate-200 px-4 md:w-1/2 md:pr-16"
-            id="consultation"
-          >
+          <div className="text-2xl text-slate-200 px-4 md:pr-16">
             <h2 className="font-semibold mb-4 text-xl md:text-2xl">
               Consultation
             </h2>
@@ -31,7 +28,7 @@ export const OurProcessSection = () => {
               requirements and budget are precisely met.
             </p>
           </div>
-          <div className="hidden md:block px-4 md:w-1/2">
+          <div className="hidden md:block px-4">
             <Image
               src="/SearleLogo.jpeg"
               alt="Consultation"
@@ -41,15 +38,15 @@ export const OurProcessSection = () => {
           </div>
 
           {/* Quote */}
-          <div className="hidden md:block px-4 md:w-1/2" id="quote">
+          <div className="hidden md:block px-4">
             <Image
               src="/SearleLogo.jpeg"
-              alt="Consultation"
+              alt="Quote"
               width={600}
               height={300}
             />
           </div>
-          <div className="text-2xl text-slate-200 px-4 md:w-1/2 md:pl-16">
+          <div className="text-2xl text-slate-200 px-4 md:pl-16">
             <h2 className="font-semibold mb-4 text-xl md:text-2xl">Quote</h2>
             <p>
               We believe in full transparency, so we provide an itemized quote
@@ -61,10 +58,7 @@ export const OurProcessSection = () => {
           </div>
 
           {/* Design/Review/Plan */}
-          <div
-            className="text-2xl text-slate-200 px-4 md:w-1/2 md:pr-16"
-            id="design-review-plan"
-          >
+          <div className="text-2xl text-slate-200 px-4 md:pl-16">
             <h2 className="font-semibold mb-4 text-xl md:text-2xl">
               Design/Review/Plan
             </h2>
@@ -76,7 +70,7 @@ export const OurProcessSection = () => {
               construction, ensuring that your vision is fully realized.
             </p>
           </div>
-          <div className="hidden md:block px-4 md:w-1/2">
+          <div className="hidden md:block px-4">
             <Image
               src="/SearleLogo.jpeg"
               alt="Design/Review/Plan"
@@ -86,10 +80,15 @@ export const OurProcessSection = () => {
           </div>
 
           {/* Start Your Project */}
-          <div
-            className="text-2xl text-slate-200 px-4 md:w-1/2 md:pl-16"
-            id="start-project"
-          >
+          <div className="hidden md:block px-4">
+            <Image
+              src="/SearleLogo.jpeg"
+              alt="Start Your Project"
+              width={600}
+              height={300}
+            />
+          </div>
+          <div className="text-2xl text-slate-200 px-4 md:pr-16">
             <h2 className="font-semibold mb-4 text-xl md:text-2xl">
               Start Your Project
             </h2>
@@ -100,14 +99,6 @@ export const OurProcessSection = () => {
               you involved, and our flexible approach allows us to adapt to any
               mid-project changes you desire.
             </p>
-          </div>
-          <div className="hidden md:block px-4 md:w-1/2">
-            <Image
-              src="/SearleLogo.jpeg"
-              alt="Start Your Project"
-              width={600}
-              height={300}
-            />
           </div>
         </div>
       </div>

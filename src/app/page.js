@@ -32,7 +32,7 @@ export default function Page() {
           </p>
 
           <Link href="#contact-us" passHref>
-            <span className="cursor-pointer inline-block px-2 py-1 text-sm md:text-base font-medium bg-red-700 border border-transparent hover:bg-slate-100 hover:text-red-700 focus:border-green-500 focus:border-opacity-40 focus:ring-4 focus:ring-slate-600 focus:ring-opacity-40 rounded-lg transition duration-300 mt-6">
+            <span className="cursor-pointer inline-block px-2 lg:px-4 py-1 lg:py-2 text-sm md:text-base font-medium bg-red-700 border border-transparent hover:bg-slate-100 hover:text-red-700 focus:border-green-500 focus:border-opacity-40 focus:ring-4 focus:ring-slate-600 focus:ring-opacity-40 rounded-lg transition duration-300 mt-6">
               Get in Touch
             </span>
           </Link>
