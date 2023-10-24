@@ -18,7 +18,7 @@ export const AboutUS = () => {
           </h1>
           <p className="mb-8 leading-relaxed">
             SQC has proudly been serving Halton region and surrounding areas for
-            over 5 yrs, providing quality craftsmanship and a high attention to
+            over 8 yrs, providing quality craftsmanship and a high attention to
             detail. From inital quote, to planning, and then execution of the
             project; SQC ensures transparent communication and professionalism.
             Thus making your renovation process as easy as possible for you.

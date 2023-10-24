@@ -78,13 +78,8 @@ const Landscaping = () => <ServicesComponent services={LandscapingServices} />;
 const InteriorServices = [
   {
     title: "Kitchens",
-    description:
-      "Create beautiful and functional kitchen spaces that meet your needs.",
-    included: [
-      "Cabinet Installation",
-      "Countertop Replacement",
-      "Hardwood Installation",
-    ],
+    description: "Create beautiful and functional kitchen spaces that meet your needs.",
+    included: ["Cabinet Installation", "Countertop Replacement", "Hardwood Installation"],
   },
   {
     title: "Basements",
@@ -93,10 +88,39 @@ const InteriorServices = [
   },
   {
     title: "Flooring",
-    description:
-      "Offering a range of flooring options including hardwood, laminate, and tile.",
+    description: "Offering a range of flooring options including hardwood, laminate, and tile.",
     included: ["Hardwood Installation", "Tile Installation", "Carpet Fitting"],
   },
+  {
+    title: "Bathroom",
+    description: "Design and renovate bathrooms for aesthetics and functionality.",
+    included: ["Fixture Installation", "Tiling", "Plumbing"],
+  },
+  {
+    title: "Framing",
+    description: "Set the structural foundation for your rooms.",
+    included: ["Wall Framing", "Roof Framing", "Doorway Framing"],
+  },
+  {
+    title: "Drywall",
+    description: "Install and finish drywall to create smooth walls and ceilings.",
+    included: ["Drywall Hanging", "Mudding", "Sanding"],
+  },
+  {
+    title: "Popcorn Ceiling Removal",
+    description: "Remove outdated popcorn ceilings to modernize your living space.",
+    included: ["Ceiling Scraping", "Resurfacing", "Painting"],
+  },
+  {
+    title: "Painting",
+    description: "Revitalize your home's appearance with professional painting services.",
+    included: ["Wall Painting", "Ceiling Painting", "Trim Painting"],
+  },
+  {
+    title: "Trim",
+    description: "Add the final touches to rooms with quality trim work.",
+    included: ["Baseboard Installation", "Crown Molding", "Door Casing"],
+  }
 ];
 
 const Interior = () => <ServicesComponent services={InteriorServices} />;
@@ -104,29 +128,29 @@ const Interior = () => <ServicesComponent services={InteriorServices} />;
 const ExteriorServices = [
   {
     title: "Siding",
-    description:
-      "Protect your home and enhance its curb appeal with our siding solutions.",
+    description: "Protect your home and enhance its curb appeal with our siding solutions.",
     included: ["Material Selection", "Installation", "Repair Services"],
   },
   {
     title: "Framing",
-    description:
-      "Creating a solid and durable frame as the backbone for your construction project.",
-    included: [
-      "Structural Planning",
-      "Material Selection",
-      "Quality Inspection",
-    ],
+    description: "Creating a solid and durable frame as the backbone for your construction project.",
+    included: ["Structural Planning", "Material Selection", "Quality Inspection"],
   },
   {
     title: "Painting",
     description: "Adding color and finish to make your project come to life.",
-    included: [
-      "Color Consultation",
-      "Surface Preparation",
-      "Finish Application",
-    ],
+    included: ["Color Consultation", "Surface Preparation", "Finish Application"],
   },
+  {
+    title: "Sheds",
+    description: "Constructing versatile sheds for storage or other functions.",
+    included: ["Design Planning", "Material Selection", "Assembly"],
+  },
+  {
+    title: "Pergola",
+    description: "Creating outdoor pergolas for shade or aesthetic appeal.",
+    included: ["Design Consultation", "Material Selection", "Installation"],
+  }
 ];
 
 const Exterior = () => <ServicesComponent services={ExteriorServices} />;

@@ -134,7 +134,7 @@ export const GallerySection = () => {
       <div className="flex-1 flex flex-col justify-center items-left p-6 mt-10 md:mt-0">
         <h2 className="text-5xl font-bold text-white mb-4">Gallery</h2>
         <p className="text-white font-light text-left px-auto">
-          At Searle Contracting, our gallery is a testament to our dedication
+          At Searle Quality Contracting, our gallery is a testament to our dedication
           and expertise, showcasing masterful projects that stand as a hallmark
           of excellence and meticulous attention to detail. Each image is a
           narrative, portraying our journey of transforming mere visions into
