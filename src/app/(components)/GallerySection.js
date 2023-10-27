@@ -86,6 +86,7 @@ export const GallerySection = () => {
                       width={400}
                       height={600}
                       sizes="(max-width: 768px) 100vw"
+                      layout="responsive"
                       loading="lazy"
                     />
                   </Slide>
