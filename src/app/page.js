@@ -34,7 +34,7 @@ export default function Page() {
         <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
         <div className="text-slate-200 p-4 md:p-8 max-w-sm md:max-w-3xl text-center relative z-20">
           <h2 className="mb-4 text-4xl md:text-6xl text-slate-200 tracking-tight">
-            Searle Contracting
+            Searle Quality Contracting
           </h2>
           <p className="mb-6 text-sm md:text-lg text-slate-200 text-opacity-75 leading-relaxed">
             Welcome to Searle Quality Contracting, the go-to source for
