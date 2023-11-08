@@ -8,7 +8,7 @@ import { GallerySection } from "./(components)/GallerySection";
 import { ContactInfoSection } from "./(components)/ContactInfoSection";
 import { ContactUsSection } from "./(components)/ContactUsSection";
 import { OurProcessSection } from "./(components)/OurProcessSection";
-import { ReviewsSection } from "./(components)/ReviewsSection";
+// import { ReviewsSection } from "./(components)/ReviewsSection";
 import Link from "next/link";
 import Header from "./(components)/Header";
 import Footer from "./(components)/Footer";
