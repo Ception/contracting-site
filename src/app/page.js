@@ -240,9 +240,9 @@ export default function Page() {
         </svg>
       </div>
 
-      <section id="reviews">
+      {/* <section id="reviews">
         <ReviewsSection />
-      </section>
+      </section> */}
 
       <div className="custom-shape-divider-top-1693420302 bg-black">
         <svg
