@@ -27,6 +27,7 @@ export async function GET() {
       return NextResponse.status(400).json({ error: r.data.status });
     }
   } catch (e) {
+    // console.log(`error coming from: ${e}`);
     return NextResponse.status(500).json({ error: "Failed to fetch reviews" });
   }
 }

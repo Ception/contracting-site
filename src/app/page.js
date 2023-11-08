@@ -38,7 +38,7 @@ export default function Page() {
           </h2>
           <p className="mb-6 text-sm md:text-lg text-slate-200 text-opacity-75 leading-relaxed">
             Welcome to Searle Quality Contracting, the go-to source for
-            exceptional renovation services in the Halton region. With over five
+            exceptional renovation services in the Halton region. With over 10
             years of experience, we specialize in quality craftsmanship and
             seamless project execution. Our professional team ensures clear
             communication from start to finish, making your renovation

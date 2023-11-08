@@ -78,8 +78,13 @@ const Landscaping = () => <ServicesComponent services={LandscapingServices} />;
 const InteriorServices = [
   {
     title: "Kitchens",
-    description: "Create beautiful and functional kitchen spaces that meet your needs.",
-    included: ["Cabinet Installation", "Countertop Replacement", "Hardwood Installation"],
+    description:
+      "Create beautiful and functional kitchen spaces that meet your needs.",
+    included: [
+      "Cabinet Installation",
+      "Countertop Replacement",
+      "Hardwood Installation",
+    ],
   },
   {
     title: "Basements",
@@ -88,12 +93,14 @@ const InteriorServices = [
   },
   {
     title: "Flooring",
-    description: "Offering a range of flooring options including hardwood, laminate, and tile.",
+    description:
+      "Offering a range of flooring options including hardwood, laminate, and tile.",
     included: ["Hardwood Installation", "Tile Installation", "Carpet Fitting"],
   },
   {
     title: "Bathroom",
-    description: "Design and renovate bathrooms for aesthetics and functionality.",
+    description:
+      "Design and renovate bathrooms for aesthetics and functionality.",
     included: ["Fixture Installation", "Tiling", "Plumbing"],
   },
   {
@@ -103,24 +110,27 @@ const InteriorServices = [
   },
   {
     title: "Drywall",
-    description: "Install and finish drywall to create smooth walls and ceilings.",
+    description:
+      "Install and finish drywall to create smooth walls and ceilings.",
     included: ["Drywall Hanging", "Mudding", "Sanding"],
   },
   {
     title: "Popcorn Ceiling Removal",
-    description: "Remove outdated popcorn ceilings to modernize your living space.",
+    description:
+      "Remove outdated popcorn ceilings to modernize your living space.",
     included: ["Ceiling Scraping", "Resurfacing", "Painting"],
   },
   {
     title: "Painting",
-    description: "Revitalize your home's appearance with professional painting services.",
+    description:
+      "Revitalize your home's appearance with professional painting services.",
     included: ["Wall Painting", "Ceiling Painting", "Trim Painting"],
   },
   {
     title: "Trim",
     description: "Add the final touches to rooms with quality trim work.",
     included: ["Baseboard Installation", "Crown Molding", "Door Casing"],
-  }
+  },
 ];
 
 const Interior = () => <ServicesComponent services={InteriorServices} />;
@@ -128,18 +138,28 @@ const Interior = () => <ServicesComponent services={InteriorServices} />;
 const ExteriorServices = [
   {
     title: "Siding",
-    description: "Protect your home and enhance its curb appeal with our siding solutions.",
+    description:
+      "Protect your home and enhance its curb appeal with our siding solutions.",
     included: ["Material Selection", "Installation", "Repair Services"],
   },
   {
     title: "Framing",
-    description: "Creating a solid and durable frame as the backbone for your construction project.",
-    included: ["Structural Planning", "Material Selection", "Quality Inspection"],
+    description:
+      "Creating a solid and durable frame as the backbone for your construction project.",
+    included: [
+      "Structural Planning",
+      "Material Selection",
+      "Quality Inspection",
+    ],
   },
   {
     title: "Painting",
     description: "Adding color and finish to make your project come to life.",
-    included: ["Color Consultation", "Surface Preparation", "Finish Application"],
+    included: [
+      "Color Consultation",
+      "Surface Preparation",
+      "Finish Application",
+    ],
   },
   {
     title: "Sheds",
@@ -150,7 +170,7 @@ const ExteriorServices = [
     title: "Pergola",
     description: "Creating outdoor pergolas for shade or aesthetic appeal.",
     included: ["Design Consultation", "Material Selection", "Installation"],
-  }
+  },
 ];
 
 const Exterior = () => <ServicesComponent services={ExteriorServices} />;
@@ -167,11 +187,20 @@ const ServicesComponent = ({ services }) => {
           className="w-full md:w-1/3 p-4 flex-grow"
         >
           <div className="relative px-8 pt-12 pb-12 h-full bg-gradient-radial-dark border-2 border-white border-opacity-30 overflow-hidden rounded-5xl">
-            <p className="mb-2 text-lg text-slate-200 font-bold">
-              {service.title}
-            </p>
+            <div className="flex items-center mb-2">
+              <Image
+                alt="check"
+                src={Check}
+                width={15}
+                height={15}
+                className="rounded-full mr-2"
+              />
+              <p className="text-lg text-slate-200 font-bold">
+                {service.title}
+              </p>
+            </div>
             <p className="mb-6 text-gray-300">{service.description}</p>
-            <ul>
+            {/* <ul>
               {service.included.map((item) => (
                 <li className="flex items-center mb-4" key={item}>
                   <div className="flex items-center justify-center w-5 h-5 mr-4 border border-green-400 rounded-full">
@@ -186,7 +215,7 @@ const ServicesComponent = ({ services }) => {
                   <p className="text-slate-200">{item}</p>
                 </li>
               ))}
-            </ul>
+            </ul> */}
           </div>
         </motion.div>
       ))}
